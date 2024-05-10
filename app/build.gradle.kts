@@ -1,6 +1,8 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlinx.serialization)
+    id("org.jetbrains.kotlin.plugin.parcelize")
 }
 
 android {
@@ -33,16 +35,47 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+        buildConfig = true
+    }
 }
 
 dependencies {
-
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
+    // Google
     implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
+
+    // Test Dependency
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    // ("test-espresso", "test-junit")
+    androidTestImplementation(libs.bundles.androidx.android.test)
+
+    // AndroidX
+    implementation(libs.activity.ktx)
+    implementation(libs.fragment.ktx)
+    // ("core-ktx", "constraintlayout", "appcompat", "activity")
+    implementation(libs.bundles.androidx)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
+
+    // Third-Party
+    implementation(libs.retrofit2)
+    implementation(libs.retrofit2.serialization.converter)
+    implementation(platform(libs.okhttp3.bom))
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+    implementation(libs.timber)
+    implementation(libs.coil)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.kotlin.coroutines)
+
+    // ViewPager
+    implementation(libs.viewPager2)
+
+    // Glide
+    implementation(libs.glide)
+
+    // Jetpack navi
+    implementation(libs.bundles.jetpack.navi)
 }
