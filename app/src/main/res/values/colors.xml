@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Main Color -->
+    <color name="main">#FFE300</color>
+    <color name="yellow0">#F5DA00</color>
+    <color name="yellow1">#EAD100</color>
+    <color name="yellow2">#E6CC00</color>
+    <color name="yellow3">#908211</color>
+
+    <!-- Point Color -->
+    <color name="blue0">#92D5DD</color>
+    <color name="blue1">#8CCCD4</color>
+    <color name="blue2">#83C0C7</color>
+    <color name="blue3">#83BFC7</color>
+    <color name="blue4">#4F696D</color>
+    <color name="pink0">#EDD0C2</color>
+    <color name="red0">#FC5C4F</color>
+    <color name="blue_gray0">#C8DCE9</color>
+    <color name="blue_gray1">#92B9D6</color>
+    <color name="deep_blue0">#0083D1</color>
+
+    <!-- Gray Color -->
+    <color name="white0">#FFFFFF</color>
+    <color name="gray0">#F9F9F9</color>
+    <color name="gray1">#F3F3F3</color>
+    <color name="gray2">#F4F4F4</color>
+    <color name="gray3">#F0F0F0</color>
+    <color name="gray4">#EBEBEB</color>
+    <color name="gray5">#C1C1C3</color>
+    <color name="gray6">#BBBBBB</color>
+    <color name="gray7">#B9B9B9</color>
+    <color name="gray8">#AAAAAA</color>
+    <color name="gray9">#999999</color>
+    <color name="gray10">#888888</color>
+    <color name="gray11">#666666</color>
+    <color name="gray12">#424242</color>
+    <color name="dark_gray0">#32353F</color>
+    <color name="dark_gray1">#282A31</color>
+    <color name="black0">#000000</color>
+    <color name="black1">#111111</color>
+    <color name="black2">#222222</color>
+
 </resources>
