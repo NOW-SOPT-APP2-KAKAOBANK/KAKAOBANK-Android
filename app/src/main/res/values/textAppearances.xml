@@ -8,109 +8,109 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.head_bold_32">
+    <style name="TextAppearance.KakaoBank.head2_bold_32">
         <item name="fontFamily">@font/font_pretendard_bold</item>
         <item name="android:textSize">32sp</item>
         <item name="lineHeight">38dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.head_bold_26">
+    <style name="TextAppearance.KakaoBank.head3_bold_26">
         <item name="fontFamily">@font/font_pretendard_bold</item>
         <item name="android:textSize">26sp</item>
         <item name="lineHeight">31dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.head_semi_21">
+    <style name="TextAppearance.KakaoBank.head4_semi_21">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">21sp</item>
         <item name="lineHeight">25dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.head_semi_20">
+    <style name="TextAppearance.KakaoBank.head6_semi_20">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">20sp</item>
         <item name="lineHeight">24dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.head_semi_16">
+    <style name="TextAppearance.KakaoBank.head7_semi_16">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">16sp</item>
         <item name="lineHeight">19dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.body_semi_15">
+    <style name="TextAppearance.KakaoBank.body1_semi_15">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">15sp</item>
         <item name="lineHeight">18dp</item>
         <item name="android:letterSpacing">3</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.body_medium_15">
+    <style name="TextAppearance.KakaoBank.body2_medium_15">
         <item name="fontFamily">@font/font_pretendard_medium</item>
         <item name="android:textSize">15sp</item>
         <item name="lineHeight">18dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.body_regular_15">
+    <style name="TextAppearance.KakaoBank.body4_regular_15">
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">15sp</item>
         <item name="lineHeight">18dp</item>
         <item name="android:letterSpacing">3</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.body_semi_14">
+    <style name="TextAppearance.KakaoBank.body6_semi_14">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">17dp</item>
         <item name="android:letterSpacing">3</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.body_regular_14">
+    <style name="TextAppearance.KakaoBank.body7_regular_14">
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">17dp</item>
         <item name="android:letterSpacing">3</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.number_regular_13">
+    <style name="TextAppearance.KakaoBank.number3_regular_13">
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">13sp</item>
         <item name="lineHeight">16dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.sub_semi_12">
+    <style name="TextAppearance.KakaoBank.sub2_semi_12">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">12sp</item>
         <item name="lineHeight">14dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.body_regular_12">
+    <style name="TextAppearance.KakaoBank.body8_regular_12">
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">12sp</item>
         <item name="lineHeight">14dp</item>
         <item name="android:letterSpacing">3</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.number_regular_11">
+    <style name="TextAppearance.KakaoBank.number2_regular_11">
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">11sp</item>
         <item name="lineHeight">13dp</item>
         <item name="android:letterSpacing">3</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.body_semi_11">
+    <style name="TextAppearance.KakaoBank.body9_semi_11">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">11sp</item>
         <item name="lineHeight">13dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.cap_semi_9">
+    <style name="TextAppearance.KakaoBank.cap2_semi_9">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">9sp</item>
         <item name="lineHeight">13dp</item>
     </style>
 
-    <style name="TextAppearance.KakaoBank.cap_semi_4">
+    <style name="TextAppearance.KakaoBank.ad2_semi_4">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">4sp</item>
         <item name="lineHeight">5dp</item>
