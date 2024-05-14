@@ -42,7 +42,7 @@
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">15sp</item>
         <item name="lineHeight">18dp</item>
-        <item name="android:letterSpacing">3</item>
+        <item name="android:letterSpacing">0.03</item>
     </style>
 
     <style name="TextAppearance.KakaoBank.body2_medium_15">
@@ -55,21 +55,21 @@
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">15sp</item>
         <item name="lineHeight">18dp</item>
-        <item name="android:letterSpacing">3</item>
+        <item name="android:letterSpacing">0.03</item>
     </style>
 
     <style name="TextAppearance.KakaoBank.body6_semi_14">
         <item name="fontFamily">@font/font_pretendard_semibold</item>
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">17dp</item>
-        <item name="android:letterSpacing">3</item>
+        <item name="android:letterSpacing">0.03</item>
     </style>
 
     <style name="TextAppearance.KakaoBank.body7_regular_14">
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">17dp</item>
-        <item name="android:letterSpacing">3</item>
+        <item name="android:letterSpacing">0.03</item>
     </style>
 
     <style name="TextAppearance.KakaoBank.number3_regular_13">
@@ -88,14 +88,14 @@
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">12sp</item>
         <item name="lineHeight">14dp</item>
-        <item name="android:letterSpacing">3</item>
+        <item name="android:letterSpacing">0.03</item>
     </style>
 
     <style name="TextAppearance.KakaoBank.number2_regular_11">
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">11sp</item>
         <item name="lineHeight">13dp</item>
-        <item name="android:letterSpacing">3</item>
+        <item name="android:letterSpacing">0.03</item>
     </style>
 
     <style name="TextAppearance.KakaoBank.body9_semi_11">
