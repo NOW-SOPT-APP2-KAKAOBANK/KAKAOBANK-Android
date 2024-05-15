@@ -18,6 +18,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         // exampleObserve()
         initHomeFragment()
         clickBottomNavigation()
+        addBadge()
     }
 
     private fun initHomeFragment(){
@@ -32,7 +33,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
     private fun clickBottomNavigation() {
         binding.bnvHome.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.menu_mybank -> {
+                R.id.menu_my_bank -> {
                     replaceFragment(HomeFragment())
                     true
                 }
@@ -45,6 +46,16 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         supportFragmentManager.beginTransaction()
             .replace(R.id.fcv_home, fragment)
             .commit()
+    }
+
+    private fun addBadge() {
+        binding.bnvHome.getOrCreateBadge(R.id.menu_notification).apply {
+            isVisible = true
+        }
+
+        binding.bnvHome.getOrCreateBadge(R.id.menu_my_page).apply {
+            isVisible = true
+        }
     }
 
     private fun exampleObserve() {
