@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- MyBank -->
     <item
         android:id="@+id/menu_mybank"
         android:icon="@drawable/ic_btn_mybank"
         android:title="" />
 
-    <!-- Menu -->
     <item
         android:id="@+id/menu_menu"
         android:icon="@drawable/ic_btn_menu"
         android:title="" />
 
 
-    <!-- Notification -->
     <item
         android:id="@+id/menu_notification"
         android:icon="@drawable/ic_btn_notification"
         android:title="" />
 
-    <!-- MyPage -->
     <item
         android:id="@+id/menu_mypage"
         android:icon="@drawable/ic_btn_mypage"
