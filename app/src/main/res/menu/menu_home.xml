@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_mybank"
-        android:icon="@drawable/ic_btn_mybank"
+        android:id="@+id/menu_my_bank"
+        android:icon="@drawable/ic_btn_my_bank"
         android:title="" />
 
     <item
@@ -17,7 +17,7 @@
         android:title="" />
 
     <item
-        android:id="@+id/menu_mypage"
-        android:icon="@drawable/ic_btn_mypage"
+        android:id="@+id/menu_my_page"
+        android:icon="@drawable/ic_btn_my_page"
         android:title="" />
 </menu>
