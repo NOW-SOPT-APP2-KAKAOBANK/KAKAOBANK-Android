@@ -19,4 +19,7 @@
     <string name="tv_bank_book3_withdraw">출금가능</string>
     <string name="tv_bank_book3_withdraw_money">3,000,041원</string>
 
+    <string name="tv_everyday_saving">춘식이와 한달동안 매일매일 저금</string>
+    <string name="tv_one_month_saving_start">한달적금 시작하기</string>
+
 </resources>
