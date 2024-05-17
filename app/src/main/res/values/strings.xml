@@ -22,4 +22,19 @@
     <string name="tv_everyday_saving">춘식이와 한달동안 매일매일 저금</string>
     <string name="tv_one_month_saving_start">한달적금 시작하기</string>
 
+    <string name="tv_joint_account">모임통장</string>
+
+    <string name="tv_everyday">매일</string>
+    <string name="tv_pin_money">용돈 받기</string>
+
+    <string name="tv_credit_loan">신용대출</string>
+    <string name="tv_compare">비교하기</string>
+
+    <string name="tv_couphone">쿠폰</string>
+    <string name="tv_buy_sell">사고팔기</string>
+
+    <string name="tv_easy_home">간편 홈</string>
+    <string name="tv_slash">|</string>
+    <string name="tv_screen_edit">화면 편집</string>
+
 </resources>
