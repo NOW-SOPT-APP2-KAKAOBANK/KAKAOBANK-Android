@@ -19,7 +19,7 @@
         android:id="@+id/tv_joint_account"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="모임통장"
+        android:text="@string/tv_joint_account"
         android:fontFamily="@font/pretendard_semibold"
         android:textColor="@color/white0"
         android:textSize="15sp"
