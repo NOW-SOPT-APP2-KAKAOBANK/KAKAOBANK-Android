@@ -50,6 +50,17 @@
         app:layout_constraintTop_toTopOf="@id/iv_bank_book2"
         app:layout_constraintStart_toStartOf="@id/iv_bank_book2"/>
 
+    <TextView
+        android:id="@+id/tv_bank_book2_leftover_won"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/tv_won"
+        android:textAppearance="@style/TextAppearance.KakaoBank.head7_semi_16"
+        android:textColor="@color/black2"
+        android:layout_marginTop="47dp"
+        app:layout_constraintTop_toTopOf="@id/iv_bank_book2"
+        app:layout_constraintStart_toEndOf="@id/tv_bank_book2_leftover"/>
+
     <ImageButton
         android:id="@+id/iv_btn_more"
         android:layout_width="wrap_content"

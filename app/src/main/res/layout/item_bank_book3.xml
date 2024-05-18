@@ -51,6 +51,17 @@
         app:layout_constraintStart_toStartOf="@id/iv_bank_book3"/>
 
     <TextView
+        android:id="@+id/tv_bank_book3_leftover_won"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/tv_won"
+        android:textAppearance="@style/TextAppearance.KakaoBank.head7_semi_16"
+        android:textColor="@color/black2"
+        android:layout_marginTop="47dp"
+        app:layout_constraintTop_toTopOf="@id/iv_bank_book3"
+        app:layout_constraintStart_toEndOf="@id/tv_bank_book3_leftover"/>
+
+    <TextView
         android:id="@+id/tv_bank_book3_withdraw"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
@@ -73,6 +84,17 @@
         android:layout_marginTop="75dp"
         app:layout_constraintTop_toTopOf="@id/iv_bank_book3"
         app:layout_constraintStart_toEndOf="@id/tv_bank_book3_withdraw"/>
+
+    <TextView
+        android:id="@+id/tv_bank_book3_withdraw_money_won"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/tv_won"
+        android:textAppearance="@style/TextAppearance.KakaoBank.number2_regular_11"
+        android:textColor="@color/blue4"
+        android:layout_marginTop="75dp"
+        app:layout_constraintTop_toTopOf="@id/iv_bank_book3"
+        app:layout_constraintStart_toEndOf="@id/tv_bank_book3_withdraw_money"/>
 
     <ImageView
         android:id="@+id/iv_emergency_fund"
