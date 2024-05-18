@@ -12,10 +12,33 @@
         android:layout_height="match_parent"
         android:background="@color/white0">
 
-        <include
+        <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar_transfer"
-            layout="@layout/view_transfer_appbar"
-            app:title="@{@string/tv_transfer_appbar_close}" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <TextView
+                    android:id="@+id/tv_transfer_appbar_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="9dp"
+                    android:clickable="true"
+                    android:paddingHorizontal="11dp"
+                    android:paddingVertical="15dp"
+                    android:text="@string/appbar_transfer_close"
+                    android:textAppearance="@style/TextAppearance.KakaoBank.body2_medium_15" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
 
         <TextView
             android:id="@+id/tv_transfer_title"
@@ -142,14 +165,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
-                android:text="김미정의 통장"
+                android:text="@string/tv_transfer_my_account_name"
                 android:textAppearance="@style/TextAppearance.KakaoBank.body7_regular_14" />
 
             <TextView
                 android:id="@+id/tv_transfer_my_account_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="카카오뱅크 3333-23-9165754"
+                android:text="@string/tv_transfer_my_account_number"
                 android:textAppearance="@style/TextAppearance.KakaoBank.number2_regular_11"
                 android:textColor="@color/gray8" />
 

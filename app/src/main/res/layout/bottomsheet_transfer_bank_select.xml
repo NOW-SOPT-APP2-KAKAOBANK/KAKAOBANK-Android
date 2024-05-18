@@ -42,7 +42,7 @@
                         android:clickable="true"
                         android:paddingHorizontal="11dp"
                         android:paddingVertical="15dp"
-                        android:text="취소"
+                        android:text="@string/appbar_transfer_bank_select_close"
                         android:textAppearance="@style/TextAppearance.KakaoBank.body2_medium_15" />
 
                 </androidx.appcompat.widget.Toolbar>
@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="21dp"
-            android:text="은행선택"
+            android:text="@string/tv_transfer_bank_select_title"
             android:textAppearance="@style/TextAppearance.KakaoBank.head6_semi_20"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layout_transfer_bank_select_appbar" />
@@ -85,7 +85,7 @@
                 android:layout_marginStart="14dp"
                 android:layout_marginTop="19dp"
                 android:layout_marginBottom="20dp"
-                android:text="은행검색"
+                android:text="@string/tv_transfer_bank_select_search"
                 android:textAppearance="@style/TextAppearance.KakaoBank.number3_regular_13"
                 android:textColor="@color/gray5" />
 
@@ -113,12 +113,12 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="은행" />
+                android:text="@string/tab_transfer_bank_select_bank" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="증권" />
+                android:text="@string/tab_transfer_bank_select_stock" />
 
         </com.google.android.material.tabs.TabLayout>
 
