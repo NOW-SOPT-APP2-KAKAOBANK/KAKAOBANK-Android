@@ -31,7 +31,6 @@ class TransferBottomSheet :
             }
             behavior.state = BottomSheetBehavior.STATE_EXPANDED  // 하단 시트 확장된 상태
             behavior.skipCollapsed = true  // 하단 시트 축소 허용 x
-            behavior.isDraggable = false  // 하단 시트를 드래그 이동 x
         }
         return dialog
     }
