@@ -46,8 +46,35 @@ object DummyTransferBankSelectList {
         TransferBankSelectTitleEntity(
             title = "증권",
             content = listOf(
-                TransferBankSelectContentEntity(R.drawable.ic_nong_bank, "증권 이름1"),
-                TransferBankSelectContentEntity(R.drawable.ic_bnk_bank, "증권 이름2")
+                TransferBankSelectContentEntity(R.drawable.ic_kyobo_stock, "교보증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_daesin_stock, "대신증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_db_stock, "DB금융투자"),
+                TransferBankSelectContentEntity(R.drawable.ic_meritz_stock, "메리츠증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_mirae_stock, "미래에셋증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_bukuk_stock, "부국증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_samsung_stock, "삼성증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_sinyoung_stock, "신영증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_sinhan_stock, "신한투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_sk_stock, "에스케이증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_hyundae_stock, "현대차증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_uanta_stock, "유안타증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_uzin_stock, "유진투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_ebest_stock, "이베스트투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_cape_stock, "케이프투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_kium_stock, "키움증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_hankuk_stock, "한국포스증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_hana_stock, "하나증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_hituza_stock, "하이투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_hankuktuza_stock, "한국투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_sangsang_stock, "상상인증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_hanhwa_stock, "한화투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_kb_stock, "KB증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_daol_stock, "다올투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_bnk_stock, "BNK투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_nh_stock, "NH투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_kakaopay_stock, "카카오페이증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_ibk_stock, "IBK투자증권"),
+                TransferBankSelectContentEntity(R.drawable.ic_toss_stock, "토스증권"),
             )
         )
     )
