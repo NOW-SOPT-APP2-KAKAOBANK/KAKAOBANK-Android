@@ -133,7 +133,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="28dp"
             android:text="@string/tv_transfer_my_account"
-            android:textAppearance="@style/TextAppearance.KakaoBank.sub2_semi_12"
+            android:textAppearance="@style/TextAppearance.KakaoBank.sub1_semi_13"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_transfer_account_number" />
 
@@ -184,7 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="@string/tv_transfer_recent_transfer"
-            android:textAppearance="@style/TextAppearance.KakaoBank.sub2_semi_12"
+            android:textAppearance="@style/TextAppearance.KakaoBank.sub1_semi_13"
             app:layout_constraintStart_toStartOf="@id/tv_transfer_my_account"
             app:layout_constraintTop_toBottomOf="@id/layout_transfer_my_account" />
 

@@ -72,6 +72,13 @@
         <item name="android:letterSpacing">0.03</item>
     </style>
 
+    <style name="TextAppearance.KakaoBank.sub1_semi_13">
+        <item name="fontFamily">@font/font_pretendard_semibold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="lineHeight">16dp</item>
+        <item name="android:letterSpacing">0.03</item>
+    </style>
+
     <style name="TextAppearance.KakaoBank.number3_regular_13">
         <item name="fontFamily">@font/font_pretendard_regular</item>
         <item name="android:textSize">13sp</item>
