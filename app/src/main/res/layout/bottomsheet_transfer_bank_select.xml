@@ -10,45 +10,34 @@
         android:background="@drawable/shape_white0_fill_25_rect"
         app:layout_behavior="com.google.android.material.bottom-sheet.BottomSheetBehavior">
 
-        <LinearLayout
-            android:id="@+id/layout_transfer_bank_select_appbar"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_transfer_bank_select"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:background="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.appbar.AppBarLayout
-                android:id="@+id/appbar_transfer_bank_select"
+            <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@null"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="48dp">
 
-                <androidx.appcompat.widget.Toolbar
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp">
+                <TextView
+                    android:id="@+id/tv_transfer_appbar_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="9dp"
+                    android:clickable="true"
+                    android:paddingHorizontal="11dp"
+                    android:paddingVertical="15dp"
+                    android:text="@string/appbar_transfer_bank_select_close"
+                    android:textAppearance="@style/TextAppearance.KakaoBank.body2_medium_15" />
 
-                    <TextView
-                        android:id="@+id/tv_transfer_appbar_close"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end"
-                        android:layout_marginEnd="9dp"
-                        android:clickable="true"
-                        android:paddingHorizontal="11dp"
-                        android:paddingVertical="15dp"
-                        android:text="@string/appbar_transfer_bank_select_close"
-                        android:textAppearance="@style/TextAppearance.KakaoBank.body2_medium_15" />
-
-                </androidx.appcompat.widget.Toolbar>
-            </com.google.android.material.appbar.AppBarLayout>
-
-        </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
 
         <TextView
             android:id="@+id/tv_transfer_bank_select_title"
@@ -58,7 +47,7 @@
             android:text="@string/tv_transfer_bank_select_title"
             android:textAppearance="@style/TextAppearance.KakaoBank.head6_semi_20"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/layout_transfer_bank_select_appbar" />
+            app:layout_constraintTop_toBottomOf="@id/appbar_transfer_bank_select" />
 
         <LinearLayout
             android:id="@+id/layout_transfer_bank_select_search"
