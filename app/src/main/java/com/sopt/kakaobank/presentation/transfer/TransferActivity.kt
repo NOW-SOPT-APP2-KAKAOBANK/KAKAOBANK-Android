@@ -27,7 +27,7 @@ class TransferActivity : BindingActivity<ActivityTransferBinding>(R.layout.activ
     }
 
     private fun initCloseBtnClickListener() {
-        binding.appbarTransfer.tvTransferAppbarClose.setOnClickListener {
+        binding.tvTransferAppbarClose.setOnClickListener {
             finish()
         }
     }
