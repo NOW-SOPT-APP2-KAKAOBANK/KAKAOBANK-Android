@@ -59,7 +59,7 @@ class HomeItemAdapter(private val items: List<HomeItem>) : RecyclerView.Adapter<
     inner class CheckLimitItemViewHolder(private val binding: ItemCheckLimitBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: HomeItem.CheckLimitItem) {
-            binding.tvScore1.text = item.name
+            binding.tvScore1.text = item.username
         }
     }
 
@@ -67,6 +67,7 @@ class HomeItemAdapter(private val items: List<HomeItem>) : RecyclerView.Adapter<
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: HomeItem.BankBookItem1) {
             binding.tvBankBook1Name.text = item.name
+            binding.tvBankBook1Leftover.text = item.leftover
         }
     }
 
@@ -74,6 +75,7 @@ class HomeItemAdapter(private val items: List<HomeItem>) : RecyclerView.Adapter<
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: HomeItem.BankBookItem2) {
             binding.tvBankBook2Name.text = item.name
+            binding.tvBankBook2Leftover.text = item.leftover
         }
     }
 
@@ -81,6 +83,8 @@ class HomeItemAdapter(private val items: List<HomeItem>) : RecyclerView.Adapter<
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: HomeItem.BankBookItem3) {
             binding.tvBankBook3Name.text = item.name
+            binding.tvBankBook3Leftover.text = item.leftover
+            binding.tvBankBook3WithdrawMoney.text = item.withdraw
         }
     }
 
