@@ -5,11 +5,11 @@
     <data></data>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/layout_transfer_bank_select_motion"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/shape_white0_fill_25_rect"
-        app:layoutDescription="@xml/bottomsheet_transfer_bank_select_xml_constraintlayout2_scene"
+        app:layoutDescription="@xml/bottomsheet_transfer_bank_select_scene"
         app:layout_behavior="com.google.android.material.bottom-sheet.BottomSheetBehavior">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -27,7 +27,7 @@
                 android:layout_height="48dp">
 
                 <TextView
-                    android:id="@+id/tv_transfer_appbar_close"
+                    android:id="@+id/tv_transfer_bank_select_appbar_close"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
