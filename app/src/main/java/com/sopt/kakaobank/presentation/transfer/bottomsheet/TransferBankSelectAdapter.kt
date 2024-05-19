@@ -7,7 +7,7 @@ import com.sopt.kakaobank.core.view.ItemDiffCallback
 import com.sopt.kakaobank.databinding.ItemTransferBankSelectBinding
 
 class TransferBankSelectAdapter :
-    ListAdapter<TransferBankSelectContentEntity, TransferBankSelectViewHolder>(
+    ListAdapter<TransferBankSelectContent, TransferBankSelectViewHolder>(
         TransferBankSelectAdapterDiffCallback
     ) {
     override fun onCreateViewHolder(
@@ -29,7 +29,7 @@ class TransferBankSelectAdapter :
 
     companion object {
         private val TransferBankSelectAdapterDiffCallback =
-            ItemDiffCallback<TransferBankSelectContentEntity>(
+            ItemDiffCallback<TransferBankSelectContent>(
                 onItemsTheSame = { old, new -> old.name == new.name },
                 onContentsTheSame = { old, new -> old == new }
             )

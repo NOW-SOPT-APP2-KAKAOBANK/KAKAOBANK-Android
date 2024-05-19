@@ -18,8 +18,8 @@ class TransferActivity : BindingActivity<ActivityTransferBinding>(R.layout.activ
         binding.rvTransferRecentTransfer.adapter = TransferAdapter(click = { _, _ -> }).apply {
             submitList(
                 listOf(
-                    TransferEntity("김윤서", "농협 1234567890", false),
-                    TransferEntity("박유진", "카카오뱅크 1234567890", false)
+                    Transfer(R.drawable.ic_toss_bank, "김윤서", "토스 1234567890", false),
+                    Transfer(R.drawable.ic_nong_bank, "박유진", "농협 1234567890", false)
                 )
             )
         }

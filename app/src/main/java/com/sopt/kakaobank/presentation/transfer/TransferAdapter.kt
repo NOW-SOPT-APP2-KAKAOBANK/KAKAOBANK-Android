@@ -7,7 +7,7 @@ import com.sopt.kakaobank.core.view.ItemDiffCallback
 import com.sopt.kakaobank.databinding.ItemTransferAccountBinding
 
 class TransferAdapter(private val click: (Boolean, Int) -> Unit) :
-    ListAdapter<TransferEntity, TransferViewHolder>(TransferAdapterDiffCallback) {
+    ListAdapter<Transfer, TransferViewHolder>(TransferAdapterDiffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransferViewHolder {
         val binding =
             ItemTransferAccountBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -20,7 +20,7 @@ class TransferAdapter(private val click: (Boolean, Int) -> Unit) :
 
     companion object {
         private val TransferAdapterDiffCallback =
-            ItemDiffCallback<TransferEntity>(
+            ItemDiffCallback<Transfer>(
                 onItemsTheSame = { old, new -> old.name == new.name },
                 onContentsTheSame = { old, new -> old == new },
             )
