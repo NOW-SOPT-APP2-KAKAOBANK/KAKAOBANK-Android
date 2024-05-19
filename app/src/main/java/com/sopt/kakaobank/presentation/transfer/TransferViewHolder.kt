@@ -8,8 +8,9 @@ class TransferViewHolder(
     private val binding: ItemTransferAccountBinding,
     private val click: (Boolean, Int) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
-    fun bind(data: TransferEntity) {
+    fun bind(data: Transfer) {
         with(binding) {
+            ivItemTransferAccount.setImageResource(data.profile)
             tvItemTransferAccountName.text = data.name
             tvItemTransferAccountNumber.text = data.account
             ivItemTransferBookmark.setOnClickListener {
