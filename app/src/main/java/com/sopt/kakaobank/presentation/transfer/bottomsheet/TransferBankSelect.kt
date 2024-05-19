@@ -2,12 +2,12 @@ package com.sopt.kakaobank.presentation.transfer.bottomsheet
 
 import androidx.annotation.DrawableRes
 
-data class TransferBankSelectTitleEntity(
+data class TransferBankSelectTitle(
     val title: String,
-    val content: List<TransferBankSelectContentEntity>
+    val content: List<TransferBankSelectContent>
 )
 
-data class TransferBankSelectContentEntity(
+data class TransferBankSelectContent(
     @DrawableRes val profile: Int,
     val name: String
 )
