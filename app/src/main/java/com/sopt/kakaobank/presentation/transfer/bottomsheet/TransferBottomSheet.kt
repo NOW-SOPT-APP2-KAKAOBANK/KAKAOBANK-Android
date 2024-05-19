@@ -45,7 +45,7 @@ class TransferBottomSheet :
     }
 
     private fun initBottomSheetCloseClickListener() {
-        binding.tvTransferAppbarClose.setOnClickListener {
+        binding.tvTransferBankSelectAppbarClose.setOnClickListener {
             dismiss()
         }
     }
