@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.telephony.PhoneNumberUtils.formatNumber
 import android.util.TypedValue
 import android.view.View
+import android.widget.AdapterView
+import android.widget.AdapterView.OnItemClickListener
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sopt.kakaobank.R
 import com.sopt.kakaobank.core.base.BindingFragment
 import com.sopt.kakaobank.databinding.FragmentHomeBinding
+import com.sopt.kakaobank.databinding.ItemBankBook1Binding
 import com.sopt.kakaobank.presentation.history.HistoryFragment
 import java.text.NumberFormat
 import java.util.Locale
@@ -38,7 +41,7 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home
             }
         }.toMutableList()
 
-        val adapter = HomeItemAdapter(formattedHomeItems)
+        val adapter = HomeItemAdapter(formattedHomeItems, this)
         binding.homeRecyclerView.layoutManager = LinearLayoutManager(context)
         binding.homeRecyclerView.adapter = adapter
 
@@ -54,6 +57,13 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home
                 outRect.bottom = spaceInPixels
             }
         })
+    }
+
+    fun navigateToHistory() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.cl_home_fragment, HistoryFragment())
+            .addToBackStack(null)
+            .commit()
     }
 
     private fun formatNumber(numberStr: String) : String {

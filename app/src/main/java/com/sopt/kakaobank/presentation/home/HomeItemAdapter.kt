@@ -1,15 +1,19 @@
 package com.sopt.kakaobank.presentation.home
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.sopt.kakaobank.R
 import com.sopt.kakaobank.databinding.ItemBankBook1Binding
 import com.sopt.kakaobank.databinding.ItemBankBook2Binding
 import com.sopt.kakaobank.databinding.ItemBankBook3Binding
 import com.sopt.kakaobank.databinding.ItemCheckLimitBinding
+import com.sopt.kakaobank.presentation.history.HistoryFragment
 
-class HomeItemAdapter(private val items: MutableList<HomeItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class HomeItemAdapter(private val items: MutableList<HomeItem>, private val fragment: HomeFragment) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
         return when (items[position]) {
@@ -69,25 +73,35 @@ class HomeItemAdapter(private val items: MutableList<HomeItem>) : RecyclerView.A
     inner class BankBookItem1ViewHolder(private val binding: ItemBankBook1Binding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: HomeItem.BankBookItem1) {
-            binding.tvBankBook1Name.text = item.name
-            binding.tvBankBook1Leftover.text = item.leftover
+            with(binding) {
+                tvBankBook1Name.text = item.name
+                tvBankBook1Leftover.text = item.leftover
+                ivBankBook1.setOnClickListener {
+                    fragment.navigateToHistory()
+                }
+            }
         }
     }
 
     inner class BankBookItem2ViewHolder(private val binding: ItemBankBook2Binding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: HomeItem.BankBookItem2) {
-            binding.tvBankBook2Name.text = item.name
-            binding.tvBankBook2Leftover.text = item.leftover
+            with(binding) {
+                tvBankBook2Name.text = item.name
+                tvBankBook2Leftover.text = item.leftover
+            }
         }
     }
 
     inner class BankBookItem3ViewHolder(private val binding: ItemBankBook3Binding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: HomeItem.BankBookItem3) {
-            binding.tvBankBook3Name.text = item.name
-            binding.tvBankBook3Leftover.text = item.leftover
-            binding.tvBankBook3WithdrawMoney.text = item.withdraw
+            with(binding) {
+                tvBankBook3Name.text = item.name
+                tvBankBook3Leftover.text = item.leftover
+                tvBankBook3WithdrawMoney.text = item.withdraw
+            }
+
         }
     }
 
