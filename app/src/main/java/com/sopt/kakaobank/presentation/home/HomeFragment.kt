@@ -28,7 +28,7 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home
     }
 
     private fun initRecyclerView() {
-        val homeItems = viewModel.homeItems.map { item ->
+        val formattedHomeItems = viewModel.homeItems.map { item ->
             when (item) {
                 is HomeItem.BankBookItem3 -> {
                     val formattedWithdraw = formatNumber(item.withdraw)
@@ -36,12 +36,13 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home
                 }
                 else -> item
             }
-        }
+        }.toMutableList()
 
-        val adapter = HomeItemAdapter(viewModel.homeItems)
+        val adapter = HomeItemAdapter(formattedHomeItems)
         binding.homeRecyclerView.layoutManager = LinearLayoutManager(context)
         binding.homeRecyclerView.adapter = adapter
 
+        // recyclerview item 간 간격 조정
         val spaceInPixels = TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP, 9f, resources.displayMetrics
         ).toInt()
