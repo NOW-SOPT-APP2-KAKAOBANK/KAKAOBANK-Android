@@ -9,7 +9,7 @@ import com.sopt.kakaobank.databinding.ItemBankBook2Binding
 import com.sopt.kakaobank.databinding.ItemBankBook3Binding
 import com.sopt.kakaobank.databinding.ItemCheckLimitBinding
 
-class HomeItemAdapter(private val items: List<HomeItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class HomeItemAdapter(private val items: MutableList<HomeItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
         return when (items[position]) {
@@ -59,7 +59,10 @@ class HomeItemAdapter(private val items: List<HomeItem>) : RecyclerView.Adapter<
     inner class CheckLimitItemViewHolder(private val binding: ItemCheckLimitBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: HomeItem.CheckLimitItem) {
-            binding.tvScore1.text = item.username
+            binding.tvUsername.text = item.username
+            binding.ivBtnCancel.setOnClickListener {
+                removeItemAt(adapterPosition)
+            }
         }
     }
 
@@ -86,6 +89,12 @@ class HomeItemAdapter(private val items: List<HomeItem>) : RecyclerView.Adapter<
             binding.tvBankBook3Leftover.text = item.leftover
             binding.tvBankBook3WithdrawMoney.text = item.withdraw
         }
+    }
+
+    private fun removeItemAt(position: Int) {
+        items.removeAt(position)
+        notifyItemRemoved(position)
+        notifyItemRangeChanged(position, items.size)
     }
 
     companion object {
