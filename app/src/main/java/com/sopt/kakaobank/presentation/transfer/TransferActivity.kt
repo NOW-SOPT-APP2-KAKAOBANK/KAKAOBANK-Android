@@ -2,10 +2,43 @@ package com.sopt.kakaobank.presentation.transfer
 
 import com.sopt.kakaobank.R
 import com.sopt.kakaobank.core.base.BindingActivity
+import com.sopt.kakaobank.core.util.context.statusBarColorOf
 import com.sopt.kakaobank.databinding.ActivityTransferBinding
+import com.sopt.kakaobank.presentation.transfer.bottomsheet.TransferBottomSheet
 
 class TransferActivity : BindingActivity<ActivityTransferBinding>(R.layout.activity_transfer) {
     override fun initView() {
-        // 로직 작성
+        statusBarColorOf(R.color.white0)
+        initTransferAdapter()
+        initCloseBtnClickListener()
+        initEnterBtnClickListener()
+    }
+
+    private fun initTransferAdapter() {
+        binding.rvTransferRecentTransfer.adapter = TransferAdapter(click = { _, _ -> }).apply {
+            submitList(
+                listOf(
+                    Transfer(R.drawable.ic_toss_bank, "김윤서", "토스 1234567890", false),
+                    Transfer(R.drawable.ic_nong_bank, "박유진", "농협 1234567890", false)
+                )
+            )
+        }
+        binding.rvTransferRecentTransfer.addItemDecoration(TransferItemDecorator(this))
+    }
+
+    private fun initCloseBtnClickListener() {
+        binding.tvTransferAppbarClose.setOnClickListener {
+            finish()
+        }
+    }
+
+    private fun initEnterBtnClickListener() {
+        binding.layoutTransferEnter.setOnClickListener {
+            TransferBottomSheet().show(supportFragmentManager, TRANSFER_BOTTOM_SHEET)
+        }
+    }
+
+    companion object {
+        const val TRANSFER_BOTTOM_SHEET = "transfer_bottom_sheet"
     }
 }
