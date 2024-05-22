@@ -39,7 +39,7 @@
 
                         <TextView
                             android:id="@+id/tv_history_account_number"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +111,7 @@
                             android:layout_height="wrap_content">
 
                             <ImageButton
-                                android:id="@+id/btn_history_back"
+                                android:id="@+id/ib_history_back"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="7dp"
@@ -129,28 +129,27 @@
                                 tools:text="햄들의 통장"
                                 android:textColor="@color/black2"
                                 android:textAppearance="@style/TextAppearance.KakaoBank.head7_semi_16"
-                                app:layout_constraintBottom_toBottomOf="@id/btn_history_back"
+                                app:layout_constraintBottom_toBottomOf="@id/ib_history_back"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="@id/btn_history_back"/>
+                                app:layout_constraintTop_toTopOf="@id/ib_history_back"/>
 
                             <ImageButton
-                                android:id="@+id/btn_history_setting"
+                                android:id="@+id/ib_history_setting"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginEnd="2dp"
                                 android:clickable="false"
                                 android:src="@drawable/ic_history_setting"
                                 android:background="@android:color/transparent"
-                                app:layout_constraintBottom_toBottomOf="@id/btn_history_back"
+                                app:layout_constraintBottom_toBottomOf="@id/ib_history_back"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="@id/btn_history_back" />
+                                app:layout_constraintTop_toTopOf="@id/ib_history_back" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.appcompat.widget.Toolbar>
                 </com.google.android.material.appbar.CollapsingToolbarLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/aa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white0"
@@ -158,7 +157,7 @@
                     app:layout_scrollFlags="scroll|enterAlways">
 
                     <ImageButton
-                        android:id="@+id/btn_history_search"
+                        android:id="@+id/ib_history_search"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="17dp"
@@ -170,7 +169,7 @@
                         app:layout_constraintTop_toTopOf="parent"/>
 
                     <ImageButton
-                        android:id="@+id/btn_history_left"
+                        android:id="@+id/ib_history_left"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="34dp"
@@ -178,11 +177,11 @@
                         android:background="@android:color/transparent"
                         android:clickable="false"
                         android:src="@drawable/ic_history_back"
-                        app:layout_constraintStart_toEndOf="@id/btn_history_search"
+                        app:layout_constraintStart_toEndOf="@id/ib_history_search"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageButton
-                        android:id="@+id/btn_history_right"
+                        android:id="@+id/ib_history_right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -190,7 +189,7 @@
                         android:background="@android:color/transparent"
                         android:clickable="false"
                         android:src="@drawable/ic_history_next"
-                        app:layout_constraintEnd_toStartOf="@id/btn_history_filter"
+                        app:layout_constraintEnd_toStartOf="@id/ib_history_filter"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -200,13 +199,13 @@
                         tools:text="2024 3월"
                         android:textAppearance="@style/TextAppearance.KakaoBank.head7_semi_16"
                         android:textColor="@color/gray11"
-                        app:layout_constraintBottom_toBottomOf="@id/btn_history_left"
-                        app:layout_constraintEnd_toStartOf="@id/btn_history_right"
-                        app:layout_constraintStart_toEndOf="@id/btn_history_left"
-                        app:layout_constraintTop_toTopOf="@id/btn_history_filter" />
+                        app:layout_constraintBottom_toBottomOf="@id/ib_history_left"
+                        app:layout_constraintEnd_toStartOf="@id/ib_history_right"
+                        app:layout_constraintStart_toEndOf="@id/ib_history_left"
+                        app:layout_constraintTop_toTopOf="@id/ib_history_filter" />
 
                     <ImageButton
-                        android:id="@+id/btn_history_filter"
+                        android:id="@+id/ib_history_filter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
@@ -227,7 +226,7 @@
                         android:textAppearance="@style/TextAppearance.KakaoBank.head6_semi_20"
                         android:textColor="@color/gray11"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/btn_history_search" />
+                        app:layout_constraintTop_toBottomOf="@id/ib_history_right" />
 
                     <TextView
                         android:id="@+id/tv_history_total_spent"
