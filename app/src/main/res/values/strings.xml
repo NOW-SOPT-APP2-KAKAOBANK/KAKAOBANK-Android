@@ -1,25 +1,30 @@
 <resources>
     <string name="app_name">KakaoBank</string>
 
+    <!-- Home -->
     <string name="username">김미정</string>
-    <string name="tv_score1">님의 신용점수는</string>
-    <string name="tv_score2">대출 승인 가능성이 높아요</string>
+    <string name="tv_my_account">내 계좌</string>
 
-    <string name="tv_won">원</string>
+    <string name="tv_credit_score">김미정님의 신용점수는\n대출 승인 가능성이 높아요</string>
+    <string name="tv_btn_limit">한도 확인하기</string>
 
     <string name="tv_bank_book1_name">햄들의 통장</string>
-    <string name="tv_bank_book1_leftover">0</string>
+    <string name="tv_bank_book1_leftover">0원</string>
+
+    <string name="tv_btn_card">카드</string>
+    <string name="tv_btn_transfer">이체</string>
 
     <string name="tv_safe_box">세이프박스</string>
     <string name="tv_safe_box_leftover">394원</string>
 
     <string name="tv_bank_book2_name">햄통장</string>
-    <string name="tv_bank_book2_leftover">304</string>
+    <string name="tv_bank_book2_leftover">304원</string>
 
     <string name="tv_bank_book3_name">김미정의 통장</string>
-    <string name="tv_bank_book3_leftover">41</string>
+    <string name="tv_bank_book3_leftover">41원</string>
     <string name="tv_bank_book3_withdraw">출금가능</string>
-    <string name="tv_bank_book3_withdraw_money">3000041</string>
+    <string name="tv_bank_book3_withdraw_money">3000041원</string>
+    <string name="tv_emergency_fund">비상금</string>
 
     <string name="tv_everyday_saving">춘식이와 한달동안 매일매일 저금</string>
     <string name="tv_one_month_saving_start">한달적금 시작하기</string>
