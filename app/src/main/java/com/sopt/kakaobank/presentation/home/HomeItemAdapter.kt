@@ -1,19 +1,17 @@
 package com.sopt.kakaobank.presentation.home
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.AdapterView.OnItemClickListener
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.sopt.kakaobank.R
 import com.sopt.kakaobank.databinding.ItemBankBook1Binding
 import com.sopt.kakaobank.databinding.ItemBankBook2Binding
 import com.sopt.kakaobank.databinding.ItemBankBook3Binding
 import com.sopt.kakaobank.databinding.ItemCheckLimitBinding
-import com.sopt.kakaobank.presentation.history.HistoryFragment
 
-class HomeItemAdapter(private val items: MutableList<HomeItem>, private val fragment: HomeFragment) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class HomeItemAdapter(
+    private val items: MutableList<HomeItem>,
+    private val fragment: HomeFragment
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
         return when (items[position]) {
@@ -31,18 +29,22 @@ class HomeItemAdapter(private val items: MutableList<HomeItem>, private val frag
                 val binding = ItemCheckLimitBinding.inflate(layoutInflater, parent, false)
                 CheckLimitItemViewHolder(binding)
             }
+
             VIEW_TYPE_BANK_BOOK_1 -> {
                 val binding = ItemBankBook1Binding.inflate(layoutInflater, parent, false)
                 BankBookItem1ViewHolder(binding)
             }
+
             VIEW_TYPE_BANK_BOOK_2 -> {
                 val binding = ItemBankBook2Binding.inflate(layoutInflater, parent, false)
                 BankBookItem2ViewHolder(binding)
             }
+
             VIEW_TYPE_BANK_BOOK_3 -> {
                 val binding = ItemBankBook3Binding.inflate(layoutInflater, parent, false)
                 BankBookItem3ViewHolder(binding)
             }
+
             else -> throw IllegalArgumentException("Invalid view type")
         }
     }
