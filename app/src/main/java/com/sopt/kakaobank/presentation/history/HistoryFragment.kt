@@ -5,7 +5,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.kakaobank.R
 import com.sopt.kakaobank.core.base.BindingFragment
 import com.sopt.kakaobank.core.util.fragment.statusBarColorOf
-import com.sopt.kakaobank.data.dto.response.History
 import com.sopt.kakaobank.databinding.FragmentHistoryBinding
 import java.text.DecimalFormat
 
@@ -18,7 +17,7 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
 
     // 뒤로 가기
     private fun initBackBtnClickListener() {
-        binding.btnHistoryBack.setOnClickListener {
+        binding.ibHistoryBack.setOnClickListener {
             findNavController().navigateUp()
         }
     }

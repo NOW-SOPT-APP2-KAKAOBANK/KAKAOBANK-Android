@@ -9,10 +9,10 @@ import com.sopt.kakaobank.databinding.ItemHistoryWithdrawBinding
 class DepositViewHolder(private val binding: ItemHistoryDepositBinding) : RecyclerView.ViewHolder(binding.root) {
     fun onBind(historyData: History) {
         binding.run {
-            tvHistoryDate.text = historyData.historyDate
-            tvHistoryName.text = historyData.historyName
-            tvHistorySpent.text = "${historyData.historySpent}원"
-            tvHistoryBalance.text = historyData.historyBalance
+            tvItemHistoryDepositDate.text = historyData.historyDate
+            tvItemHistoryDepositName.text = historyData.historyName
+            tvItemHistoryDepositSpent.text = "${historyData.historySpent}원"
+            tvItemHistoryDepositBalance.text = historyData.historyBalance
         }
     }
 }
@@ -21,10 +21,10 @@ class DepositViewHolder(private val binding: ItemHistoryDepositBinding) : Recycl
 class WithdrawViewHolder(private val binding: ItemHistoryWithdrawBinding) : RecyclerView.ViewHolder(binding.root) {
     fun onBind(historyData: History) {
         binding.run {
-            tvHistoryDate.text = historyData.historyDate
-            tvHistoryName.text = historyData.historyName
-            tvHistorySpent.text = "${historyData.historySpent}원"
-            tvHistoryBalance.text = historyData.historyBalance
+            tvItemHistoryWithdrawDate.text = historyData.historyDate
+            tvItemHistoryWithdrawName.text = historyData.historyName
+            tvItemHistoryWithdrawSpent.text = "${historyData.historySpent}원"
+            tvItemHistoryWithdrawBalance.text = historyData.historyBalance
         }
     }
 }
