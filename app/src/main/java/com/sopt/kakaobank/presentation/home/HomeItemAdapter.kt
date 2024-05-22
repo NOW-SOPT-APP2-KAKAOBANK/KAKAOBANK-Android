@@ -63,9 +63,10 @@ class HomeItemAdapter(private val items: MutableList<HomeItem>, private val frag
     inner class CheckLimitItemViewHolder(private val binding: ItemCheckLimitBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: HomeItem.CheckLimitItem) {
-            binding.tvUsername.text = item.username
-            binding.ivBtnCancel.setOnClickListener {
-                removeItemAt(adapterPosition)
+            with(binding) {
+                ibBtnCancel.setOnClickListener {
+                    removeItemAt(adapterPosition)
+                }
             }
         }
     }
@@ -76,7 +77,7 @@ class HomeItemAdapter(private val items: MutableList<HomeItem>, private val frag
             with(binding) {
                 tvBankBook1Name.text = item.name
                 tvBankBook1Leftover.text = item.leftover
-                ivBankBook1.setOnClickListener {
+                clBankBook1.setOnClickListener {
                     fragment.navigateToHistory()
                 }
             }
