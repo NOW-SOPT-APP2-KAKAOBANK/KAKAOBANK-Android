@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_my_bank"
+        android:icon="@drawable/ic_btn_my_bank"
+        android:title="" />
+
+    <item
+        android:id="@+id/menu_menu"
+        android:icon="@drawable/ic_btn_menu"
+        android:title="" />
+
+
+    <item
+        android:id="@+id/menu_notification"
+        android:icon="@drawable/ic_btn_notification"
+        android:title="" />
+
+    <item
+        android:id="@+id/menu_my_page"
+        android:icon="@drawable/ic_btn_my_page"
+        android:title="" />
+</menu>
