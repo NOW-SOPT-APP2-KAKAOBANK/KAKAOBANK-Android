@@ -62,40 +62,42 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_history_account_number" />
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/btn_history_transfer"
+                        <TextView
+                            android:id="@+id/tv_history_transfer"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:clickable="true"
                             android:layout_marginTop="45dp"
                             android:layout_marginBottom="30dp"
-                            android:background="@drawable/shape_yellow0_fill_rect"
+                            android:background="@drawable/shape_yellow0_fill_10_rect"
+                            android:paddingVertical="16dp"
                             android:paddingHorizontal="47dp"
                             android:text="@string/history_transfer"
                             android:textColor="@color/black2"
                             android:textAppearance="@style/TextAppearance.KakaoBank.number3_regular_13"
-                            android:elevation="0dp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/btn_history_get"
+                            app:layout_constraintEnd_toStartOf="@id/tv_history_get"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_history_balance"
                             app:layout_constraintHorizontal_chainStyle="packed"/>
 
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/btn_history_get"
+                        <TextView
+                            android:id="@+id/tv_history_get"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:clickable="true"
                             android:layout_marginStart="7dp"
                             android:layout_marginBottom="30dp"
-                            android:background="@drawable/shape_yellow0_fill_rect"
-                            android:elevation="0dp"
+                            android:background="@drawable/shape_yellow0_fill_10_rect"
+                            android:paddingVertical="16dp"
                             android:paddingHorizontal="47dp"
                             android:text="@string/history_get"
                             android:textColor="@color/black2"
                             android:textAppearance="@style/TextAppearance.KakaoBank.number3_regular_13"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@id/btn_history_transfer"
-                            app:layout_constraintTop_toTopOf="@id/btn_history_transfer" />
+                            app:layout_constraintStart_toEndOf="@id/tv_history_transfer"
+                            app:layout_constraintTop_toTopOf="@id/tv_history_transfer" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.appcompat.widget.Toolbar
