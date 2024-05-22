@@ -17,8 +17,8 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         // 로직 작성
         // exampleObserve()
         initHomeFragment()
-        clickBottomNavigation()
-        addBadge()
+        initBottomNavClickListener()
+        initBottomNavBadge()
     }
 
     private fun initHomeFragment(){
@@ -30,7 +30,7 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
         }
     }
 
-    private fun clickBottomNavigation() {
+    private fun initBottomNavClickListener() {
         binding.bnvHome.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_my_bank -> {
@@ -48,14 +48,9 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
             .commit()
     }
 
-    private fun addBadge() {
-        binding.bnvHome.getOrCreateBadge(R.id.menu_notification).apply {
-            isVisible = true
-        }
-
-        binding.bnvHome.getOrCreateBadge(R.id.menu_my_page).apply {
-            isVisible = true
-        }
+    private fun initBottomNavBadge() {
+        binding.bnvHome.getOrCreateBadge(R.id.menu_notification).isVisible = true
+        binding.bnvHome.getOrCreateBadge(R.id.menu_my_page).isVisible = true
     }
 
     private fun exampleObserve() {
