@@ -2,14 +2,6 @@
     <string name="app_name">KakaoBank</string>
 
     <!--history-->
-    <string name="history_account_name">햄들의 통장</string>
-    <string name="history_account_number"><u>3333-17-1799152</u></string>
     <string name="history_transfer">이체하기</string>
     <string name="history_get">가져오기</string>
-    <string name="history_month">2024 3월</string>
-    <string name="history_usage">3월 사용내역</string>
-    <string name="history_date">03.23</string>
-    <string name="history_name">입출금통장 이자</string>
-    <string name="history_tag">#예금이자</string>
-    <string name="history_balance">0원</string>
 </resources>
