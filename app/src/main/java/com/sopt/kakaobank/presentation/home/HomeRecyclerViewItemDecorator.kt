@@ -5,19 +5,22 @@ import android.graphics.Rect
 import android.util.TypedValue
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.sopt.kakaobank.core.util.context.pxToDp
 
-class HomeRecyclerViewItemDecorator(context: Context) : RecyclerView.ItemDecoration() {
-    private val spaceInPixels: Int
-
-    init {
-        spaceInPixels = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP, 9f, context.resources.displayMetrics
-        ).toInt()
-    }
-
+class HomeRecyclerViewItemDecorator(val context: Context) : RecyclerView.ItemDecoration() {
     override fun getItemOffsets(
-        outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State
+        outRect: Rect,
+        view: View,
+        parent: RecyclerView,
+        state: RecyclerView.State
     ) {
-        outRect.bottom = spaceInPixels
+        super.getItemOffsets(outRect, view, parent, state)
+        val position = parent.getChildAdapterPosition(view)
+        if (position == 0) {
+            outRect.top = context.pxToDp(9)
+            outRect.bottom = context.pxToDp(9)
+        } else {
+            outRect.bottom = context.pxToDp(9)
+        }
     }
 }
