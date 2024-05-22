@@ -11,7 +11,7 @@ class DepositViewHolder(private val binding: ItemHistoryDepositBinding) : Recycl
         binding.run {
             tvHistoryDate.text = historyData.historyDate
             tvHistoryName.text = historyData.historyName
-            tvHistorySpent.text = "-${historyData.historySpent}"
+            tvHistorySpent.text = "${historyData.historySpent}원"
             tvHistoryBalance.text = historyData.historyBalance
         }
     }
@@ -23,7 +23,7 @@ class WithdrawViewHolder(private val binding: ItemHistoryWithdrawBinding) : Recy
         binding.run {
             tvHistoryDate.text = historyData.historyDate
             tvHistoryName.text = historyData.historyName
-            tvHistorySpent.text = historyData.historySpent
+            tvHistorySpent.text = "${historyData.historySpent}원"
             tvHistoryBalance.text = historyData.historyBalance
         }
     }
