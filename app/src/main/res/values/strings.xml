@@ -44,4 +44,8 @@
     <string name="tv_slash">|</string>
     <string name="tv_screen_edit">화면 편집</string>
 
+
+    <!--history-->
+    <string name="history_transfer">이체하기</string>
+    <string name="history_get">가져오기</string>
 </resources>
