@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sopt.kakaobank.R
 import com.sopt.kakaobank.core.base.BindingFragment
+import com.sopt.kakaobank.core.util.fragment.statusBarColorOf
 import com.sopt.kakaobank.databinding.FragmentHomeBinding
 import com.sopt.kakaobank.databinding.ItemBankBook1Binding
 import com.sopt.kakaobank.presentation.history.HistoryFragment
@@ -21,16 +22,14 @@ import java.util.Locale
 
 class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
-    private val viewModel: HomeViewModel by viewModels()
+    private val viewModel by viewModels<HomeViewModel>()
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.homeViewModel = viewModel
-        binding.lifecycleOwner = viewLifecycleOwner
-        initRecyclerView()
+    override fun initView() {
+        statusBarColorOf(R.color.dark_gray1)
+        initHomeItemAdapter()
     }
 
-    private fun initRecyclerView() {
+    private fun initHomeItemAdapter() {
         val formattedHomeItems = viewModel.homeItems.map { item ->
             when (item) {
                 is HomeItem.BankBookItem3 -> {
@@ -41,22 +40,10 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home
             }
         }.toMutableList()
 
-        val adapter = HomeItemAdapter(formattedHomeItems, this)
-        binding.homeRecyclerView.layoutManager = LinearLayoutManager(context)
-        binding.homeRecyclerView.adapter = adapter
+        binding.rvHomeBox.adapter = HomeItemAdapter(formattedHomeItems, this)
+        binding.rvHomeBox.layoutManager = LinearLayoutManager(context)
 
-        // recyclerview item 간 간격 조정
-        val spaceInPixels = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP, 9f, resources.displayMetrics
-        ).toInt()
-
-        binding.homeRecyclerView.addItemDecoration(object : RecyclerView.ItemDecoration() {
-            override fun getItemOffsets(
-                outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State
-            ) {
-                outRect.bottom = spaceInPixels
-            }
-        })
+        binding.rvHomeBox.addItemDecoration(HomeRecyclerViewItemDecorator(requireContext()))
     }
 
     fun navigateToHistory() {
@@ -67,12 +54,8 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home
     }
 
     private fun formatNumber(numberStr: String) : String {
-        val number = numberStr.toIntOrNull() ?: return numberStr
-        return NumberFormat.getNumberInstance(Locale.US).format(number)
+        return numberStr.toIntOrNull()?.let {
+            NumberFormat.getNumberInstance(Locale.US).format(it)
+        } ?: numberStr
     }
-
-    override fun initView() {
-        // 로직 작성
-    }
-
 }
