@@ -31,9 +31,9 @@
         android:textAppearance="@style/TextAppearance.KakaoBank.number2_regular_11"
         android:textColor="@color/black2"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toBottomOf="@id/iv_bank_book3_logo"
-        app:layout_constraintStart_toEndOf="@id/iv_bank_book3_logo"/>
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toEndOf="@id/iv_bank_book3_logo"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/tv_bank_book3_leftover"
@@ -70,77 +70,62 @@
         app:layout_constraintTop_toTopOf="@id/tv_bank_book3_withdraw"
         app:layout_constraintStart_toEndOf="@id/tv_bank_book3_withdraw"/>
 
-    <FrameLayout
-        android:id="@+id/fl_emergency_fund"
-        android:layout_width="33dp"
-        android:layout_height="16dp"
+    <TextView
+        android:id="@+id/tv_emergency_fund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:paddingBottom="3dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="5dp"
+        android:layout_gravity="center"
+        android:text="@string/tv_emergency_fund"
+        android:textAppearance="@style/TextAppearance.KakaoBank.cap2_semi_9"
+        android:textColor="@color/white0"
+        android:gravity="center"
         android:background="@drawable/shape_blue3_fill_20_rect"
+        android:layout_marginTop="29dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="-1dp"
-        app:layout_constraintTop_toTopOf="@id/tv_bank_book3_name"
-        app:layout_constraintStart_toEndOf="@id/tv_bank_book3_name">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="tv_bank_book3_name"/>
 
-        <TextView
-            android:id="@+id/tv_emergency_fund"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/tv_emergency_fund"
-            android:textAppearance="@style/TextAppearance.KakaoBank.cap2_semi_9"
-            android:textColor="@color/white0"
-            android:gravity="center"
-            android:background="@android:color/transparent"/>
-
-    </FrameLayout>
-
-    <ImageButton
-        android:id="@+id/ib_btn_more"
+    <ImageView
+        android:id="@+id/iv_btn_more"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:src="@drawable/ic_btn_more"
-        android:background="@null"
-        android:layout_marginStart="135dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="@id/fl_emergency_fund"
-        app:layout_constraintStart_toEndOf="@id/fl_emergency_fund"/>
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="19dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <FrameLayout
-        android:id="@+id/fl_btn_transfer"
-        android:layout_width="48dp"
-        android:layout_height="31dp"
+    <TextView
+        android:id="@+id/tv_btn_transfer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="13dp"
+        android:paddingVertical="8dp"
+        android:gravity="center"
+        android:text="@string/tv_btn_transfer"
+        android:textAppearance="@style/TextAppearance.KakaoBank.sub2_semi_12"
         android:background="@drawable/shape_blue1_fill_20_rect"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="53dp"
-        app:layout_constraintTop_toBottomOf="@id/ib_btn_more"
-        app:layout_constraintStart_toEndOf="@id/tv_bank_book3_name">
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-        <TextView
-            android:id="@+id/tv_btn_transfer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/tv_btn_transfer"
-            android:textAppearance="@style/TextAppearance.KakaoBank.sub2_semi_12"/>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/fl_btn_card"
-        android:layout_width="48dp"
-        android:layout_height="31dp"
+    <TextView
+        android:id="@+id/tv_btn_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="13dp"
+        android:paddingVertical="8dp"
+        android:gravity="center"
+        android:text="@string/tv_btn_card"
+        android:textAppearance="@style/TextAppearance.KakaoBank.sub2_semi_12"
         android:background="@drawable/shape_blue1_fill_20_rect"
         android:layout_marginEnd="7dp"
-        app:layout_constraintTop_toTopOf="@id/fl_btn_transfer"
-        app:layout_constraintEnd_toStartOf="@id/fl_btn_transfer">
-
-        <TextView
-            android:id="@+id/tv_btn_card"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/tv_btn_card"
-            android:textAppearance="@style/TextAppearance.KakaoBank.sub2_semi_12"/>
-
-    </FrameLayout>
+        app:layout_constraintEnd_toStartOf="@id/tv_btn_transfer"
+        app:layout_constraintTop_toTopOf="@id/tv_btn_transfer"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
