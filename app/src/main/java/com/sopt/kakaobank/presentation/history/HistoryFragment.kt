@@ -28,7 +28,8 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
         initBackBtnClickListener()
         initTransferBtnClickListener()
         initGetAccountObserve()
-        initMonthBtnClickListener()
+        initPreviousMonthBtnClickListener()
+        initNextMonthBtnClickListener()
         updateMonthPayment(month)
     }
 
@@ -69,21 +70,7 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
     }
 
     // 이체 내역
-    private fun initMonthBtnClickListener() {
-        binding.ibHistoryLeft.setOnClickListener {
-            month = getPreviousMonth()
-            updateMonthPayment(month)
-        }
-
-        binding.ibHistoryRight.setOnClickListener {
-            month = getNextMonth()
-            updateMonthPayment(month)
-        }
-    }
-
-    // 달 선택
-    private fun initGetPaymentObserve(month: String) {
-
+    private fun initGetPaymentObserve() {
         historyViewModel.getPaymentLiveData.observe(this) {
             when (it) {
                 is UiState.Success -> {
@@ -98,7 +85,6 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
 
     // 결제 내역 뷰 적용
     private fun initMonthlyTransfer(data: ResponseMonthPaymentDto) {
-
         with(binding){
             val payment = initFormatAmount(data.payment)
             tvHistoryTotalSpent.text = "${payment}원"
@@ -117,7 +103,7 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
 
     private fun updateMonthPayment(month: Int) {
         historyViewModel.getMonthPayment(month)
-        initGetPaymentObserve(month.toString())
+        initGetPaymentObserve()
     }
 
     private fun getCurrentMonth(): Int {
@@ -126,12 +112,24 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
     }
 
     // 이전 달
+    private fun initPreviousMonthBtnClickListener() {
+        binding.ibHistoryLeft.setOnClickListener {
+            month = getPreviousMonth()
+            updateMonthPayment(month)
+        }
+    }
     private fun getPreviousMonth(): Int {
         month = if (month == 1) 12 else month - 1
         return month
     }
 
     // 다음 달
+    private fun initNextMonthBtnClickListener() {
+        binding.ibHistoryRight.setOnClickListener {
+            month = getNextMonth()
+            updateMonthPayment(month)
+        }
+    }
     private fun getNextMonth(): Int {
         month = if (month == 12) 1 else month + 1
         return month
