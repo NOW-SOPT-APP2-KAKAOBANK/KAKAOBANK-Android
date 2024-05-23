@@ -88,16 +88,22 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
             when (it) {
                 is UiState.Success -> {
                     initHistoryAdapter(it.data.monthlyTransferList)
-                    with(binding){
-                        val payment = initFormatAmount(it.data.payment)
-                        tvHistoryTotalSpent.text = "${payment}원"
-                        tvHistoryUsage.text = "${month}월 전체"
-                        tvHistoryDate.text =  "${getCurrentYear()} ${month}월"
-                    }
+                    initMonthlyTransfer(it.data)
                 }
                 is UiState.Failure -> Timber.d("실패")
                 is UiState.Loading -> Timber.d("로딩중")
             }
+        }
+    }
+
+    // 결제 내역 뷰 적용
+    private fun initMonthlyTransfer(data: ResponseMonthPaymentDto) {
+
+        with(binding){
+            val payment = initFormatAmount(data.payment)
+            tvHistoryTotalSpent.text = "${payment}원"
+            tvHistoryUsage.text = "${month}월 전체"
+            tvHistoryDate.text =  "${getCurrentYear()} ${month}월"
         }
     }
 
