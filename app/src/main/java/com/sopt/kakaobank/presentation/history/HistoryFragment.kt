@@ -53,12 +53,13 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
             when (it) {
                 is UiState.Success -> {
                     with(binding){
-                        tvHistoryAccountName.text = it.data.accountName
                         val spannableString = SpannableString(it.data.accountNumber.toString()).apply {
                             setSpan(UnderlineSpan(), 0, length, 0)
                         }
+                        val balance = initFormatAmount(it.data.balance)
+                        tvHistoryAccountName.text = it.data.accountName
                         tvHistoryAccountNumber.text = spannableString
-                        tvHistoryBalance.text = initFormatAmount(it.data.balance)
+                        tvHistoryBalance.text = "${balance}원"
                     }
                 }
                 is UiState.Failure -> Timber.d("실패")
