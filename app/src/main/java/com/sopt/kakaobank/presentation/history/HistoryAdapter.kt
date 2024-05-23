@@ -5,11 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.sopt.kakaobank.core.view.ItemDiffCallback
-import com.sopt.kakaobank.data.dto.response.History
+import com.sopt.kakaobank.data.dto.response.ResponseMonthPaymentDto
 import com.sopt.kakaobank.databinding.ItemHistoryDepositBinding
 import com.sopt.kakaobank.databinding.ItemHistoryWithdrawBinding
 
-class HistoryAdapter : ListAdapter<History, RecyclerView.ViewHolder>(HistoryAdapterDiffCallback) {
+class HistoryAdapter : ListAdapter<ResponseMonthPaymentDto.MonthlyTransfer, RecyclerView.ViewHolder>(HistoryAdapterDiffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
             TYPE_DEPOSIT -> ItemHistoryDepositBinding.inflate(
@@ -47,8 +47,8 @@ class HistoryAdapter : ListAdapter<History, RecyclerView.ViewHolder>(HistoryAdap
         const val TYPE_DEPOSIT = 0
         const val TYPE_WITHDRAW = 1
 
-        private val HistoryAdapterDiffCallback = ItemDiffCallback<History>(
-            onItemsTheSame = { old, new -> old.historyName == new.historyName },
+        private val HistoryAdapterDiffCallback = ItemDiffCallback<ResponseMonthPaymentDto.MonthlyTransfer>(
+            onItemsTheSame = { old, new -> old.accountName == new.accountName },
             onContentsTheSame = { old, new -> old == new }
         )
     }
