@@ -5,6 +5,6 @@ data class Transfer(
     val profile: String,
     val accountName: String,
     val bankName: String,
-    val accountNumber: Int,
+    val accountNumber: Long,
     var bookmark: Boolean,
 )
