@@ -20,7 +20,7 @@ import java.util.Calendar
 class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragment_history) {
 
     private val historyViewModel by viewModels<HistoryViewModel>()
-    var month = getCurrentMonth()
+    private var month = getCurrentMonth()
 
     override fun initView() {
         statusBarColorOf(R.color.main) //status 색상 변경
@@ -134,7 +134,7 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
     }
 
     // 현재 연도
-    fun getCurrentYear(): String {
+    private fun getCurrentYear(): String {
         val calendar = Calendar.getInstance()
         val dateFormat = SimpleDateFormat("yyyy")
         return dateFormat.format(calendar.time)
