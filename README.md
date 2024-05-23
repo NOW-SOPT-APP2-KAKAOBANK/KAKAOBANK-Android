@@ -24,7 +24,7 @@
 
 | <div align="center">홈</div> | <div align="center">거래 내역</div> | <div align="center">계좌 이체</div> | <div align="center">은행 선택</div> |
 |--------|--------|--------|--------|
-| ![image]() | ![image](https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/41bd71bc-460f-494b-a88e-750d695a659a) | ![image](https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/6c321ed7-cf6e-46b8-bd48-633ab5224373) | ![image](https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/9bab38d7-1195-4647-8052-b0eaa281cfd6)| 
+| ![image](https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/dd587b12-7104-4afd-abf5-cb19de780bab) | ![image](https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/41bd71bc-460f-494b-a88e-750d695a659a) | ![image](https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/6c321ed7-cf6e-46b8-bd48-633ab5224373) | ![image](https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/9bab38d7-1195-4647-8052-b0eaa281cfd6)| 
 
 <br>
 
