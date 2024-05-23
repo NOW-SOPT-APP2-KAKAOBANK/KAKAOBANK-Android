@@ -30,13 +30,13 @@
 
 ### 𝙑𝙞𝙙𝙚𝙤
 #### [홈/𝒉𝒐𝒎𝒆]
-
+https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/93753120-89a0-4007-9ca6-a717ec22e403
 
 #### [거래 내역/𝒉𝒊𝒔𝒕𝒐𝒓𝒚]
 https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/6aea3510-89e6-444d-9c62-3a55857b0ef2
 
 #### [계좌 이체/𝒕𝒓𝒂𝒏𝒔𝒇𝒆𝒓]
-
+https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/1499363b-1ee3-4fb9-b937-aa34588c42bc
 
 #### [은행 선택/𝒕𝒓𝒂𝒏𝒔𝒇𝒆𝒓𝑩𝒂𝒏𝒌𝑺𝒆𝒍𝒆𝒄𝒕]
 https://github.com/NOW-SOPT-APP2-KAKAOBANK/KAKAOBANK-Android/assets/85453429/af29a9d4-ca7e-4f35-9d5c-5fd3f7aaf724
