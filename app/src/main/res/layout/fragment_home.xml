@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="homeViewModel"
             type="com.sopt.kakaobank.presentation.home.HomeViewModel" />
@@ -28,30 +27,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <FrameLayout
-            android:id="@+id/fl_my_account"
-            android:layout_width="55dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="5dp"
+        <TextView
+            android:id="@+id/tv_my_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_my_account"
+            android:textAppearance="@style/TextAppearance.KakaoBank.sub2_semi_12"
+            android:textColor="@color/gray8"
+            android:background="@drawable/shape_darkgray0_fill_50_rect"
+            android:gravity="center"
+            android:paddingStart="11dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="6dp"
+            android:layout_marginStart="6dp"
             app:layout_constraintStart_toEndOf="@id/tv_home_username"
-            app:layout_constraintTop_toTopOf="@id/tv_home_username">
-
-            <ImageView
-                android:id="@+id/iv_my_account"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/shape_darkgray0_fill_50_rect" />
-
-            <TextView
-                android:id="@+id/tv_my_account"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/tv_my_account"
-                android:textAppearance="@style/TextAppearance.KakaoBank.sub2_semi_12"
-                android:textColor="@color/gray8" />
-
-        </FrameLayout>
+            app:layout_constraintTop_toTopOf="@id/tv_home_username"/>
 
         <ImageView
             android:id="@+id/iv_profile"
