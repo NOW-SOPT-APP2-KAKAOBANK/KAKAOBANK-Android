@@ -9,7 +9,7 @@ import com.sopt.kakaobank.databinding.ItemBankBook3Binding
 import com.sopt.kakaobank.databinding.ItemCheckLimitBinding
 
 class HomeItemAdapter(
-    private val items: MutableList<HomeItem>,
+    private val items: List<HomeItem>,
     private val fragment: HomeFragment
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -102,14 +102,14 @@ class HomeItemAdapter(
             with(binding) {
                 tvBankBook3Name.text = item.name
                 tvBankBook3Leftover.text = item.leftover
-                tvBankBook3WithdrawMoney.text = item.withdraw
+                //tvBankBook3WithdrawMoney.text = item.withdraw
             }
 
         }
     }
 
     private fun removeItemAt(position: Int) {
-        items.removeAt(position)
+        (items as MutableList<HomeItem>).removeAt(position)
         notifyItemRemoved(position)
         notifyItemRangeChanged(position, items.size)
     }
