@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sopt.kakaobank.data.ServicePool.homeApiService
 import kotlinx.coroutines.launch
-import retrofit2.await
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -18,7 +17,7 @@ class HomeViewModel : ViewModel() {
     fun getHomeItems() {
         viewModelScope.launch {
             try {
-                val response = homeApiService.getAccountList(1).await()
+                val response = homeApiService.getAccountList(1)
                 val homeItems = mutableListOf<HomeItem>()
                 homeItems.add(HomeItem.CheckLimitItem("김미정"))
 
