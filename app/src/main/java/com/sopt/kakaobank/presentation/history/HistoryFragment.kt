@@ -4,7 +4,6 @@ import android.content.Intent
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.kakaobank.R
 import com.sopt.kakaobank.core.base.BindingFragment
@@ -16,7 +15,6 @@ import com.sopt.kakaobank.databinding.FragmentHistoryBinding
 import com.sopt.kakaobank.presentation.transfer.TransferActivity
 import timber.log.Timber
 import java.text.SimpleDateFormat
-import java.time.LocalDate
 import java.util.Calendar
 
 class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragment_history) {
@@ -90,8 +88,9 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
                 is UiState.Success -> {
                     initHistoryAdapter(it.data.monthlyTransferList)
                     with(binding){
-                        tvHistoryTotalSpent.text = initFormatAmount(it.data.payment)
-                        tvHistoryUsage.text = "${month}월 사용 내역"
+                        val payment = initFormatAmount(it.data.payment)
+                        tvHistoryTotalSpent.text = "${payment}원"
+                        tvHistoryUsage.text = "${month}월 전체"
                         tvHistoryDate.text =  "${getCurrentYear()} ${month}월"
                     }
                 }
