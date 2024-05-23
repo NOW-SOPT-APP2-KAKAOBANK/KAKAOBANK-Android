@@ -2,7 +2,7 @@ package com.sopt.kakaobank.data.api
 
 import com.sopt.kakaobank.core.util.KeyStorage.ACCOUNT_ID
 import com.sopt.kakaobank.core.util.KeyStorage.API
-import com.sopt.kakaobank.core.util.KeyStorage.BOOKMAKR
+import com.sopt.kakaobank.core.util.KeyStorage.BOOKMARK
 import com.sopt.kakaobank.core.util.KeyStorage.MARKED_ACCOUNT_ID
 import com.sopt.kakaobank.core.util.KeyStorage.MY_ACCOUNT_ID
 import com.sopt.kakaobank.core.util.KeyStorage.RECENT_TRANSFERS
@@ -19,13 +19,13 @@ interface TransferApiService {
         @Path(value = ACCOUNT_ID) accountId: Int,
     ): List<ResponseTransferRecentDto>
 
-    @POST("$API/$V1/$RECENT_TRANSFERS/{$MY_ACCOUNT_ID}/$BOOKMAKR/{$MARKED_ACCOUNT_ID}")
+    @POST("$API/$V1/$RECENT_TRANSFERS/{$MY_ACCOUNT_ID}/$BOOKMARK/{$MARKED_ACCOUNT_ID}")
     suspend fun postTransferBookmark(
         @Path(value = MY_ACCOUNT_ID) myAccountId: Int,
         @Path(value = MARKED_ACCOUNT_ID) markedAccountId: Int,
     )
 
-    @DELETE("$API/$V1/$RECENT_TRANSFERS/{$MY_ACCOUNT_ID}/$BOOKMAKR/{$MARKED_ACCOUNT_ID}")
+    @DELETE("$API/$V1/$RECENT_TRANSFERS/{$MY_ACCOUNT_ID}/$BOOKMARK/{$MARKED_ACCOUNT_ID}")
     suspend fun deleteTransferBookmark(
         @Path(value = MY_ACCOUNT_ID) myAccountId: Int,
         @Path(value = MARKED_ACCOUNT_ID) markedAccountId: Int,
