@@ -102,7 +102,6 @@ class HomeItemAdapter(
             with(binding) {
                 tvBankBook3Name.text = item.name
                 tvBankBook3Leftover.text = item.leftover
-                //tvBankBook3WithdrawMoney.text = item.withdraw
             }
 
         }
