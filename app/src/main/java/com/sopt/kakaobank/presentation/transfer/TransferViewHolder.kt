@@ -14,6 +14,7 @@ class TransferViewHolder(
             Glide.with(root.context).load(data.profile).centerCrop().into(ivItemTransferAccount)
             tvItemTransferAccountName.text = data.accountName
             tvItemTransferAccountNumber.text = "${data.accountName} ${data.accountNumber}"
+            ivItemTransferBookmark.isSelected = data.bookmark
             ivItemTransferBookmark.setImageResource(if (data.bookmark) R.drawable.ic_transfer_bookmark_on else R.drawable.ic_transfer_bookmark_off)
             initBookmarkBtnClickListener(data)
         }

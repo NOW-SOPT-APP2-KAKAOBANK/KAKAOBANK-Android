@@ -17,6 +17,9 @@ class TransferViewModel : ViewModel() {
     private val _postTransferBookmark = MutableSharedFlow<UiState<Boolean>>()
     val postTransferBookmark: SharedFlow<UiState<Boolean>> get() = _postTransferBookmark
 
+    private val _deleteTransferBookmark = MutableSharedFlow<UiState<Boolean>>()
+    val deleteTransferBookmark: SharedFlow<UiState<Boolean>> get() = _deleteTransferBookmark
+
     init {
         getTransferRecent()
     }
@@ -33,6 +36,12 @@ class TransferViewModel : ViewModel() {
     fun postTransferBookmark(markedAccountId: Int) = viewModelScope.launch {
         runCatching {
             ServicePool.transferApiService.postTransferBookmark(1, markedAccountId)
+        }.fold({ }, { })
+    }
+
+    fun deleteTransferBookmark(markedAccountId: Int) = viewModelScope.launch {
+        runCatching {
+            ServicePool.transferApiService.deleteTransferBookmark(1, markedAccountId)
         }.fold({ }, { })
     }
 }

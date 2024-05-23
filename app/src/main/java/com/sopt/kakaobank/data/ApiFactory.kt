@@ -5,6 +5,7 @@ import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFact
 import com.sopt.kakaobank.BuildConfig.BASE_URL
 import com.sopt.kakaobank.data.api.ExampleApiService
 import com.sopt.kakaobank.data.api.TransferApiService
+import com.sopt.kakaobank.data.api.HomeApiService
 import com.sopt.kakaobank.data.api.HistoryApiService
 import kotlinx.serialization.json.Json
 import okhttp3.Interceptor
@@ -40,6 +41,7 @@ object ApiFactory {
 
 object ServicePool {
     val exampleService = ApiFactory.create<ExampleApiService>()
+    val homeApiService = ApiFactory.create<HomeApiService>()
     val historyService = ApiFactory.create<HistoryApiService>()
     val transferApiService = ApiFactory.create<TransferApiService>()
 }
