@@ -2,7 +2,6 @@ package com.sopt.kakaobank.presentation.home
 
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.map
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sopt.kakaobank.R
 import com.sopt.kakaobank.core.base.BindingFragment
@@ -24,36 +23,14 @@ class HomeFragment : BindingFragment<FragmentHomeBinding>(R.layout.fragment_home
     }
 
     private fun initHomeItemAdapter() {
-//        val formattedHomeItems = viewModel.homeItems.map { item ->
-//            when (item) {
-//                is HomeItem.BankBookItem3 -> {
-//                    val formattedWithdraw = formatNumber(item.withdraw)
-//                    item.copy(withdraw = formattedWithdraw)
-//                }
-//
-//                else -> item
-//            }
-//        }.toMutableList()
-//
-//        binding.rvHomeBox.adapter = HomeItemAdapter(formattedHomeItems, this)
         binding.rvHomeBox.layoutManager = LinearLayoutManager(context)
-
         binding.rvHomeBox.addItemDecoration(HomeRecyclerViewItemDecorator(requireContext()))
     }
 
     private fun observeHomeItems() {
         viewModel.homeItems.observe(viewLifecycleOwner, Observer { homeItems ->
             homeItems?.let {
-                val formattedHomeItems = it.map { item ->
-                    when (item) {
-                        is HomeItem.BankBookItem3 -> {
-                            val formattedWithdraw = formatNumber(item.withdraw)
-                            item.copy(withdraw = formattedWithdraw)
-                        }
-                        else -> item
-                    }
-                }
-                binding.rvHomeBox.adapter = HomeItemAdapter(formattedHomeItems, this)
+                binding.rvHomeBox.adapter = HomeItemAdapter(it, this)
             }
         })
     }
