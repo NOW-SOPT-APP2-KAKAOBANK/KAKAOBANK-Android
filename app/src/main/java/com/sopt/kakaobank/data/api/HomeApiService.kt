@@ -1,19 +1,17 @@
 package com.sopt.kakaobank.data.api
 
+import com.sopt.kakaobank.core.util.KeyStorage.ACCOUNT_LIST
+import com.sopt.kakaobank.core.util.KeyStorage.API
+import com.sopt.kakaobank.core.util.KeyStorage.V1
 import com.sopt.kakaobank.data.dto.response.ResponseAccountDto
-import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface HomeApiService {
-    companion object {
-        const val API = "api"
-        const val V1 = "v1"
-        const val ACCOUNT_LIST = "account-list"
-    }
 
     @GET("$API/$V1/$ACCOUNT_LIST/{memberId}")
-    fun getAccountList(
+    suspend fun getAccountList(
         @Path("memberId") memberId: Int
-    ): Call<List<ResponseAccountDto>>
+    ): List<ResponseAccountDto>
+
 }
