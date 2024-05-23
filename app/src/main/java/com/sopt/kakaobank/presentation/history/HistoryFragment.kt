@@ -36,7 +36,8 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
     // 뒤로 가기
     private fun initBackBtnClickListener() {
         binding.ibHistoryBack.setOnClickListener {
-            findNavController().navigateUp()
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+            statusBarColorOf(R.color.dark_gray1)
         }
     }
 
