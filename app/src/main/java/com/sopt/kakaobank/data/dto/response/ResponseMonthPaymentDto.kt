@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class ResponseMonthPayment(
+data class ResponseMonthPaymentDto(
     @SerialName("payment")
     val payment: Long,
     @SerialName("isTotalOverZero")

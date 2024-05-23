@@ -10,7 +10,7 @@ import com.sopt.kakaobank.core.base.BindingFragment
 import com.sopt.kakaobank.core.util.context.initFormatAmount
 import com.sopt.kakaobank.core.util.fragment.statusBarColorOf
 import com.sopt.kakaobank.core.view.UiState
-import com.sopt.kakaobank.data.dto.response.ResponseMonthPayment
+import com.sopt.kakaobank.data.dto.response.ResponseMonthPaymentDto
 import com.sopt.kakaobank.databinding.FragmentHistoryBinding
 import com.sopt.kakaobank.presentation.transfer.TransferActivity
 import timber.log.Timber
@@ -100,7 +100,7 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
         }
     }
 
-    private fun initHistoryAdapter(data: List<ResponseMonthPayment.MonthlyTransfer>) {
+    private fun initHistoryAdapter(data: List<ResponseMonthPaymentDto.MonthlyTransfer>) {
         binding.rvHistoryUsage.adapter = HistoryAdapter(
         ).apply {
             submitList(data)

@@ -5,16 +5,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sopt.kakaobank.core.view.UiState
 import com.sopt.kakaobank.data.ServicePool
-import com.sopt.kakaobank.data.dto.response.ResponseAccountInfo
-import com.sopt.kakaobank.data.dto.response.ResponseMonthPayment
+import com.sopt.kakaobank.data.dto.response.ResponseAccountInfoDto
+import com.sopt.kakaobank.data.dto.response.ResponseMonthPaymentDto
 import kotlinx.coroutines.launch
 
 class HistoryViewModel : ViewModel() {
-    private val _getAccountLiveData: MutableLiveData<UiState<ResponseAccountInfo>> = MutableLiveData()
-    val getAccountLiveData: MutableLiveData<UiState<ResponseAccountInfo>> = _getAccountLiveData
+    private val _getAccountLiveData: MutableLiveData<UiState<ResponseAccountInfoDto>> = MutableLiveData()
+    val getAccountLiveData: MutableLiveData<UiState<ResponseAccountInfoDto>> = _getAccountLiveData
 
-    private val _getPaymentLiveData: MutableLiveData<UiState<ResponseMonthPayment>> = MutableLiveData()
-    val getPaymentLiveData: MutableLiveData<UiState<ResponseMonthPayment>> = _getPaymentLiveData
+    private val _getPaymentLiveData: MutableLiveData<UiState<ResponseMonthPaymentDto>> = MutableLiveData()
+    val getPaymentLiveData: MutableLiveData<UiState<ResponseMonthPaymentDto>> = _getPaymentLiveData
 
     init {
         getAccountInfo()
