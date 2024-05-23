@@ -6,12 +6,12 @@ import androidx.recyclerview.widget.ListAdapter
 import com.sopt.kakaobank.core.view.ItemDiffCallback
 import com.sopt.kakaobank.databinding.ItemTransferAccountBinding
 
-class TransferAdapter(private val click: (Boolean, Int) -> Unit) :
+class TransferAdapter(private val onClickBookmarkBtn: (Int, Boolean) -> Unit) :
     ListAdapter<Transfer, TransferViewHolder>(TransferAdapterDiffCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransferViewHolder {
         val binding =
             ItemTransferAccountBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return TransferViewHolder(binding, click)
+        return TransferViewHolder(binding, onClickBookmarkBtn)
     }
 
     override fun onBindViewHolder(holder: TransferViewHolder, position: Int) {
@@ -21,7 +21,7 @@ class TransferAdapter(private val click: (Boolean, Int) -> Unit) :
     companion object {
         private val TransferAdapterDiffCallback =
             ItemDiffCallback<Transfer>(
-                onItemsTheSame = { old, new -> old.name == new.name },
+                onItemsTheSame = { old, new -> old.id == new.id },
                 onContentsTheSame = { old, new -> old == new },
             )
     }
