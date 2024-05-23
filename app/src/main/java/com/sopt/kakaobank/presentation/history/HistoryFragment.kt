@@ -61,11 +61,10 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
 
     // 계좌 정보 뷰 적용
     private fun initMyAccount(data: ResponseAccountInfoDto) {
-        with(binding){
-            val balance = initFormatAmount(data.balance)
+        with(binding) {
             tvHistoryAccountName.text = data.accountName
             tvHistoryAccountNumber.text = createUnderlined(data.accountNumber)
-            tvHistoryBalance.text = "${balance}원"
+            initFormatAmount(data.balance).let { tvHistoryBalance.text = "${it}원" }
         }
     }
 
@@ -85,11 +84,10 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
 
     // 결제 내역 뷰 적용
     private fun initMonthlyTransfer(data: ResponseMonthPaymentDto) {
-        with(binding){
-            val payment = initFormatAmount(data.payment)
-            tvHistoryTotalSpent.text = "${payment}원"
+        with(binding) {
+            initFormatAmount(data.payment).let { tvHistoryTotalSpent.text = "${it}원" }
             tvHistoryUsage.text = "${month}월 전체"
-            tvHistoryDate.text =  "${getCurrentYear()} ${month}월"
+            tvHistoryDate.text = "${getCurrentYear()} ${month}월"
         }
     }
 
@@ -106,10 +104,7 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
         initGetPaymentObserve()
     }
 
-    private fun getCurrentMonth(): Int {
-        val calendar = Calendar.getInstance()
-        return calendar.get(Calendar.MONTH)
-    }
+    private fun getCurrentMonth(): Int = Calendar.getInstance().get(Calendar.MONTH)
 
     // 이전 달
     private fun initPreviousMonthBtnClickListener() {
@@ -118,6 +113,7 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
             updateMonthPayment(month)
         }
     }
+
     private fun getPreviousMonth(): Int {
         month = if (month == 1) 12 else month - 1
         return month
@@ -130,22 +126,19 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
             updateMonthPayment(month)
         }
     }
+
     private fun getNextMonth(): Int {
         month = if (month == 12) 1 else month + 1
         return month
     }
 
     // 현재 연도
-    private fun getCurrentYear(): String {
-        val calendar = Calendar.getInstance()
-        val dateFormat = SimpleDateFormat("yyyy")
-        return dateFormat.format(calendar.time)
-    }
+    private fun getCurrentYear(): String =
+        SimpleDateFormat("yyyy").format(Calendar.getInstance().time)
 
     // 밑줄
-    private fun createUnderlined(account: Long): SpannableString {
-        return SpannableString(account.toString()).apply {
+    private fun createUnderlined(account: Long): SpannableString =
+        SpannableString(account.toString()).apply {
             setSpan(UnderlineSpan(), 0, length, 0)
         }
-    }
 }
