@@ -52,12 +52,9 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
             when (it) {
                 is UiState.Success -> {
                     with(binding){
-                        val spannableString = SpannableString(it.data.accountNumber.toString()).apply {
-                            setSpan(UnderlineSpan(), 0, length, 0)
-                        }
                         val balance = initFormatAmount(it.data.balance)
                         tvHistoryAccountName.text = it.data.accountName
-                        tvHistoryAccountNumber.text = spannableString
+                        tvHistoryAccountNumber.text = createUnderlined(it.data.accountNumber)
                         tvHistoryBalance.text = "${balance}원"
                     }
                 }
@@ -141,5 +138,12 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
         val calendar = Calendar.getInstance()
         val dateFormat = SimpleDateFormat("yyyy")
         return dateFormat.format(calendar.time)
+    }
+
+    // 밑줄
+    private fun createUnderlined(account: Long): SpannableString {
+        return SpannableString(account.toString()).apply {
+            setSpan(UnderlineSpan(), 0, length, 0)
+        }
     }
 }
