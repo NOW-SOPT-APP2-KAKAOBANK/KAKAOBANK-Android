@@ -17,10 +17,10 @@ class DepositViewHolder(private val binding: ItemHistoryDepositBinding) : Recycl
             tvItemHistoryDepositName.text = historyData.accountName
             tvItemHistoryDepositSpent.text = "${transAmount}원"
 
-            if(historyData.isWithdraw)
+            if(historyData.hashTag != null)
             {
                 tvItemHistoryDepositTag.isVisible = true
-                tvItemHistoryDepositTag.text = historyData.hashTag
+                tvItemHistoryDepositTag.text = "#${historyData.hashTag}"
             }
         }
     }
@@ -36,10 +36,10 @@ class WithdrawViewHolder(private val binding: ItemHistoryWithdrawBinding) : Recy
             tvItemHistoryWithdrawName.text = historyData.accountName
             tvItemHistoryWithdrawSpent.text = "${transAmount}원"
 
-            if(historyData.isWithdraw)
+            if(historyData.hashTag != null)
             {
                 tvItemHistoryWithdrawTag.isVisible = true
-                tvItemHistoryWithdrawTag.text = historyData.hashTag
+                tvItemHistoryWithdrawTag.text = "#${historyData.hashTag}"
             }
         }
     }
