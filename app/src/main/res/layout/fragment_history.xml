@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -8,16 +9,268 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white0">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="history / 유진"
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/layout_history_appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main"
+                    app:collapsedTitleGravity="center"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="68dp">
+
+                        <TextView
+                            android:id="@+id/tv_history_account_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="3333-17-1799152"
+                            android:textAppearance="@style/TextAppearance.KakaoBank.number3_regular_13"
+                            android:textColor="@color/yellow3"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tv_history_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            tools:text="0원"
+                            android:textColor="@color/black2"
+                            android:textAppearance="@style/TextAppearance.KakaoBank.head2_bold_32"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_history_account_number" />
+
+                        <TextView
+                            android:id="@+id/tv_history_transfer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/shape_yellow0_fill_10_rect"
+                            android:paddingVertical="16dp"
+                            android:paddingHorizontal="47dp"
+                            android:text="@string/history_transfer"
+                            android:textColor="@color/black2"
+                            android:textAppearance="@style/TextAppearance.KakaoBank.number3_regular_13"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/tv_history_get"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_history_balance"
+                            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+                        <TextView
+                            android:id="@+id/tv_history_get"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/shape_yellow0_fill_10_rect"
+                            android:paddingVertical="16dp"
+                            android:paddingHorizontal="47dp"
+                            android:text="@string/history_get"
+                            android:textColor="@color/black2"
+                            android:textAppearance="@style/TextAppearance.KakaoBank.number3_regular_13"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/tv_history_transfer"
+                            app:layout_constraintTop_toTopOf="@id/tv_history_transfer" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@color/main"
+                        app:contentInsetStart="0dp"
+                        app:layout_collapseMode="pin">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:id="@+id/ib_history_back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="7dp"
+                                android:clickable="true"
+                                android:src="@drawable/ic_history_back"
+                                app:tint="@color/black0"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/tv_history_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="햄들의 통장"
+                                android:textColor="@color/black2"
+                                android:textAppearance="@style/TextAppearance.KakaoBank.head7_semi_16"
+                                app:layout_constraintBottom_toBottomOf="@id/ib_history_back"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/ib_history_back"/>
+
+                            <ImageButton
+                                android:id="@+id/ib_history_setting"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="2dp"
+                                android:clickable="false"
+                                android:src="@drawable/ic_history_setting"
+                                android:background="@android:color/transparent"
+                                app:layout_constraintBottom_toBottomOf="@id/ib_history_back"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/ib_history_back" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white0"
+                    android:clipChildren="true"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <ImageButton
+                        android:id="@+id/ib_history_search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:src="@drawable/ic_history_search"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageButton
+                        android:id="@+id/ib_history_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="34dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:src="@drawable/ic_history_back"
+                        app:layout_constraintStart_toEndOf="@id/ib_history_search"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/ib_history_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="34dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:src="@drawable/ic_history_next"
+                        app:layout_constraintEnd_toStartOf="@id/ib_history_filter"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_history_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="2024 3월"
+                        android:textAppearance="@style/TextAppearance.KakaoBank.head7_semi_16"
+                        android:textColor="@color/gray11"
+                        app:layout_constraintBottom_toBottomOf="@id/ib_history_left"
+                        app:layout_constraintEnd_toStartOf="@id/ib_history_right"
+                        app:layout_constraintStart_toEndOf="@id/ib_history_left"
+                        app:layout_constraintTop_toTopOf="@id/ib_history_filter" />
+
+                    <ImageButton
+                        android:id="@+id/ib_history_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="7dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="false"
+                        android:src="@drawable/ic_history_filter"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_history_usage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="35dp"
+                        tools:text="3월 사용 내역"
+                        android:textAppearance="@style/TextAppearance.KakaoBank.head6_semi_20"
+                        android:textColor="@color/gray11"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ib_history_right" />
+
+                    <TextView
+                        android:id="@+id/tv_history_total_spent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        tools:text="0원"
+                        android:textAppearance="@style/TextAppearance.KakaoBank.head6_semi_20"
+                        android:textColor="@color/black2"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_history_usage"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tv_history_usage" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray0"
+                android:clipChildren="true"
+                android:fillViewport="true"
+                android:overScrollMode="never"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                android:layout_marginTop="32dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white0">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_history_usage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:listitem="@layout/item_history_deposit" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

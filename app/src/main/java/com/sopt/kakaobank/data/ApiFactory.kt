@@ -2,6 +2,7 @@ package com.sopt.kakaobank.data
 
 import android.util.Log
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
+import com.sopt.kakaobank.BuildConfig.BASE_URL
 import com.sopt.kakaobank.data.api.ExampleApiService
 import com.sopt.kakaobank.data.api.TransferApiService
 import kotlinx.serialization.json.Json
@@ -27,7 +28,7 @@ object ApiFactory {
 
     val retrofit: Retrofit by lazy {
         Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl(BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
             .build()
