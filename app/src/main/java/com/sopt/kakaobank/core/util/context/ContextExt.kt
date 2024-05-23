@@ -11,6 +11,7 @@ import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
+import java.text.DecimalFormat
 
 fun Context.toast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
@@ -49,4 +50,10 @@ fun Context.statusBarColorOf(
     if (this is Activity) {
         window?.statusBarColor = colorOf(resId)
     }
+}
+
+// 1000원 단위 콤마
+fun initFormatAmount(amount: Long): String {
+    val dec = DecimalFormat("#,###")
+    return dec.format(amount)
 }
