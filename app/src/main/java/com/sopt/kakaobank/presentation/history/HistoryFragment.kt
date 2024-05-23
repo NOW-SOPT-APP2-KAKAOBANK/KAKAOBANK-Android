@@ -10,6 +10,7 @@ import com.sopt.kakaobank.core.base.BindingFragment
 import com.sopt.kakaobank.core.util.context.initFormatAmount
 import com.sopt.kakaobank.core.util.fragment.statusBarColorOf
 import com.sopt.kakaobank.core.view.UiState
+import com.sopt.kakaobank.data.dto.response.ResponseAccountInfoDto
 import com.sopt.kakaobank.data.dto.response.ResponseMonthPaymentDto
 import com.sopt.kakaobank.databinding.FragmentHistoryBinding
 import com.sopt.kakaobank.presentation.transfer.TransferActivity
@@ -117,19 +118,13 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
 
     // 이전 달
     private fun getPreviousMonth(): Int {
-        month -= 1
-        if (month < 1) {
-            month = 12
-        }
+        month = if (month == 1) 12 else month - 1
         return month
     }
 
     // 다음 달
     private fun getNextMonth(): Int {
-        month += 1
-        if (month > 12) {
-            month = 1
-        }
+        month = if (month == 12) 1 else month + 1
         return month
     }
 
