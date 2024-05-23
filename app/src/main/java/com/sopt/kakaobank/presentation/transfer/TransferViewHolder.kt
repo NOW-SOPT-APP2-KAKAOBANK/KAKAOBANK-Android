@@ -25,7 +25,7 @@ class TransferViewHolder(
                 onClickBookmarkBtn(data.id, ivItemTransferBookmark.isSelected)
                 data.bookmark = !ivItemTransferBookmark.isSelected
                 ivItemTransferBookmark.isSelected = !ivItemTransferBookmark.isSelected
-                //ivItemTransferBookmark.setImageResource(if (data.bookmark) R.drawable.ic_transfer_bookmark_on else R.drawable.ic_transfer_bookmark_off)
+                ivItemTransferBookmark.setImageResource(if (data.bookmark) R.drawable.ic_transfer_bookmark_on else R.drawable.ic_transfer_bookmark_off)
             }
         }
     }

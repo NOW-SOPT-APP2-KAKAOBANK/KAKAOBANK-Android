@@ -12,7 +12,7 @@ interface HomeApiService {
 
     @GET("$API/$V1/$ACCOUNT_LIST/{$MEMBER_ID}")
     suspend fun getAccountList(
-        @Path("MEMBER_ID") memberId: Int
+        @Path(value = MEMBER_ID) memberId: Int
     ): List<ResponseAccountDto>
 
 }
