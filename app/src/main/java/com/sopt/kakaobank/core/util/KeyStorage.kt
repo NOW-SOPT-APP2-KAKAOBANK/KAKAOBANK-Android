@@ -6,6 +6,6 @@ object KeyStorage {
     const val RECENT_TRANSFERS = "recent-transfers"
     const val ACCOUNT_ID = "accountId"
     const val MY_ACCOUNT_ID = "myAccountId"
-    const val BOOKMAKR = "bookmark"
+    const val BOOKMARK = "bookmark"
     const val MARKED_ACCOUNT_ID = "markedAccountId"
 }
