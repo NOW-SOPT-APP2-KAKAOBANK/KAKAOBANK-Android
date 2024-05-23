@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sopt.kakaobank.data.ServicePool.homeApiService
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -14,7 +15,11 @@ class HomeViewModel : ViewModel() {
     private val _homeItems = MutableLiveData<List<HomeItem>>()
     val homeItems: LiveData<List<HomeItem>> get() = _homeItems
 
-    fun getHomeItems() {
+    init {
+        getHomeItems()
+    }
+
+    private fun getHomeItems() {
         viewModelScope.launch {
             try {
                 val response = homeApiService.getAccountList(1)
@@ -28,12 +33,12 @@ class HomeViewModel : ViewModel() {
                     when (index % 3) {
                         0 -> homeItems.add(HomeItem.BankBookItem1(dto.accountName, balanceWithWon))
                         1 -> homeItems.add(HomeItem.BankBookItem2(dto.accountName, balanceWithWon))
-                        2 -> homeItems.add(HomeItem.BankBookItem3(dto.accountName, balanceWithWon, "3,000,041원"))
+                        2 -> homeItems.add(HomeItem.BankBookItem3(dto.accountName, balanceWithWon))
                     }
                 }
                 _homeItems.value = homeItems
             } catch (e: Exception) {
-                // 에러 처리
+                Timber.e("서버 통신 실패")
             }
         }
     }
