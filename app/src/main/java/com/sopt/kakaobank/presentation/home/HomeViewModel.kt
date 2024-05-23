@@ -7,6 +7,8 @@ import androidx.lifecycle.viewModelScope
 import com.sopt.kakaobank.data.ServicePool.homeApiService
 import kotlinx.coroutines.launch
 import retrofit2.await
+import java.text.NumberFormat
+import java.util.Locale
 
 class HomeViewModel : ViewModel() {
 
@@ -20,8 +22,10 @@ class HomeViewModel : ViewModel() {
                 val homeItems = mutableListOf<HomeItem>()
                 homeItems.add(HomeItem.CheckLimitItem("김미정"))
 
+                val numberFormat = NumberFormat.getNumberInstance(Locale.KOREA)
+
                 response.forEachIndexed { index, dto ->
-                    val balanceWithWon = "${dto.balance}원"
+                    val balanceWithWon = "${numberFormat.format(dto.balance)}원"
                     when (index % 3) {
                         0 -> homeItems.add(HomeItem.BankBookItem1(dto.accountName, balanceWithWon))
                         1 -> homeItems.add(HomeItem.BankBookItem2(dto.accountName, balanceWithWon))
