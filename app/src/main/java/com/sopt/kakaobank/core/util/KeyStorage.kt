@@ -10,4 +10,7 @@ object KeyStorage {
     const val MY_ACCOUNT_ID = "myAccountId"
     const val BOOKMARK = "bookmark"
     const val MARKED_ACCOUNT_ID = "markedAccountId"
+    const val ACCOUNT_INFO = "account-info"
+    const val PAYMENT = "payment"
+    const val MONTH = "month"
 }
