@@ -1,5 +1,9 @@
 package com.sopt.kakaobank.data.api
 
+import com.sopt.kakaobank.core.util.KeyStorage.ACCOUNT_ID
+import com.sopt.kakaobank.core.util.KeyStorage.INFO
+import com.sopt.kakaobank.core.util.KeyStorage.MONTH
+import com.sopt.kakaobank.core.util.KeyStorage.PAYMENT
 import com.sopt.kakaobank.data.api.ExampleApiService.Companion.API
 import com.sopt.kakaobank.data.api.ExampleApiService.Companion.V1
 import com.sopt.kakaobank.data.dto.response.ResponseAccountInfo
@@ -9,13 +13,6 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface HistoryApiService {
-    companion object {
-        const val INFO = "account-info"
-        const val PAYMENT = "payment"
-        const val ACCOUNT_ID = "accountId"
-        const val MONTH = "month"
-    }
-
     // 내 계좌 정보 조회
     @GET("$API/$V1/$INFO/{$ACCOUNT_ID}")
     suspend fun getAccountInfo(
