@@ -38,7 +38,7 @@ class TransferActivity : BindingActivity<ActivityTransferBinding>(R.layout.activ
         status: Boolean,
     ) {
         if (status) {
-            // 코드 구현 : 윤서
+            transferViewModel.deleteTransferBookmark(markedAccountId)
         } else {
             transferViewModel.postTransferBookmark(markedAccountId)
         }
