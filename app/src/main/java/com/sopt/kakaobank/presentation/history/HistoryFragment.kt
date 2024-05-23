@@ -51,17 +51,20 @@ class HistoryFragment : BindingFragment<FragmentHistoryBinding>(R.layout.fragmen
     private fun initGetAccountObserve() {
         historyViewModel.getAccountLiveData.observe(this) {
             when (it) {
-                is UiState.Success -> {
-                    with(binding){
-                        val balance = initFormatAmount(it.data.balance)
-                        tvHistoryAccountName.text = it.data.accountName
-                        tvHistoryAccountNumber.text = createUnderlined(it.data.accountNumber)
-                        tvHistoryBalance.text = "${balance}원"
-                    }
-                }
+                is UiState.Success -> initMyAccount(it.data)
                 is UiState.Failure -> Timber.d("실패")
                 is UiState.Loading -> Timber.d("로딩중")
             }
+        }
+    }
+
+    // 계좌 정보 뷰 적용
+    private fun initMyAccount(data: ResponseAccountInfoDto) {
+        with(binding){
+            val balance = initFormatAmount(data.balance)
+            tvHistoryAccountName.text = data.accountName
+            tvHistoryAccountNumber.text = createUnderlined(data.accountNumber)
+            tvHistoryBalance.text = "${balance}원"
         }
     }
 
