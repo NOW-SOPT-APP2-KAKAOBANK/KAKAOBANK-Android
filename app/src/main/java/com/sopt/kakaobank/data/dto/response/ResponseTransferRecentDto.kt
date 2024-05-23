@@ -9,7 +9,7 @@ data class ResponseTransferRecentDto(
     @SerialName("accountName")
     val accountName: String,
     @SerialName("accountNumber")
-    val accountNumber: Int,
+    val accountNumber: Long,
     @SerialName("isAccountLike")
     val isAccountLike: Boolean,
     @SerialName("createdAt")
