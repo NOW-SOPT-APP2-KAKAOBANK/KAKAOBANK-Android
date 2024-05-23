@@ -1,10 +1,10 @@
 package com.sopt.kakaobank.presentation.transfer
 
-import androidx.annotation.DrawableRes
-
 data class Transfer(
-    @DrawableRes val profile: Int,
-    val name: String,
-    val account: String,
+    val id: Int,
+    val profile: String,
+    val accountName: String,
+    val bankName: String,
+    val accountNumber: Long,
     var bookmark: Boolean,
 )
