@@ -6,14 +6,14 @@ import com.sopt.kakaobank.R
 import com.sopt.kakaobank.databinding.ItemTransferAccountBinding
 
 class TransferViewHolder(
-    private val binding: ItemTransferAccountBinding,
+    private val binding:v ItemTransferAccountBinding,
     private val onClickBookmarkBtn: (Int, Boolean) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(data: Transfer) {
         with(binding) {
             Glide.with(root.context).load(data.profile).centerCrop().into(ivItemTransferAccount)
             tvItemTransferAccountName.text = data.accountName
-            tvItemTransferAccountNumber.text = "${data.accountName} ${data.accountNumber}"
+            tvItemTransferAccountNumber.text = "${data.bankName} ${data.accountNumber}"
             ivItemTransferBookmark.isSelected = data.bookmark
             ivItemTransferBookmark.setImageResource(if (data.bookmark) R.drawable.ic_transfer_bookmark_on else R.drawable.ic_transfer_bookmark_off)
             initBookmarkBtnClickListener(data)
