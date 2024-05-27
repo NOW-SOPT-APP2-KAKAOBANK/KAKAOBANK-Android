@@ -6,7 +6,7 @@ import com.sopt.kakaobank.R
 import com.sopt.kakaobank.databinding.ItemTransferAccountBinding
 
 class TransferViewHolder(
-    private val binding:v ItemTransferAccountBinding,
+    private val binding: ItemTransferAccountBinding,
     private val onClickBookmarkBtn: (Int, Boolean) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(data: Transfer) {
